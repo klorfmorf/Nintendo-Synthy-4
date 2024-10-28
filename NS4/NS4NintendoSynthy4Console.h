@@ -327,7 +327,7 @@ int oldmain() {
 
 //#include "Src/Games/NS4DonkeyKong64Files.inl"
 //#include "Src/Games/NS4DonkeyKong64KioskFiles.inl"
-//#include "Src/Games/NS4Turok3ShadowOfOblivion.inl"
+#include "Src/Games/NS4Turok3ShadowOfOblivion.inl"
 //#include "Src/Games/NS4Turok2SeedsOfEvilFiles.inl"
 //#include "Src/Games/NS4TurokRageWars.inl"
 //#include "Src/Games/NS4TurokDinosaurHunterFiles.inl"
@@ -348,7 +348,7 @@ int oldmain() {
 //#include "Src/Games/NS4AeroFightersAssaultFiles.inl"
 //#include "Src/Games/NS4AeroFightersAssaultOverSamplingFiles.inl"
 //#include "Src/Games/NS4F1WorldGrandPrixFiles.inl"
-#include "Src/Games/NS4BodyHarvestFiles.inl"
+//#include "Src/Games/NS4BodyHarvestFiles.inl"
 //#include "Src/Games/NS4MischiefMakersFiles.inl"
 //#include "Src/Games/NS4ChameleonTwistFiles.inl"
 //#include "Src/Games/NS4ChameleonTwist2Files.inl"
