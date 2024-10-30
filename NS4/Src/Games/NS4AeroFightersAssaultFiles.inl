@@ -17,12 +17,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
-
 #define NS4_OVERSAMPLING					(1 << 2)
 #define NS4_OVERSAMPLING_BW					22050.0 / 2.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
-
 
 { u8"AeroFighters Assault (U) 00000006 006617F0.mid", u8"AeroFighters Assault (U) 00000006 006617F0.mid TrackParseDebug.txt", u8"Title", 0 },
 { u8"AeroFighters Assault (U) 00000007 006618E8.mid", u8"AeroFighters Assault (U) 00000007 006618E8.mid TrackParseDebug.txt", u8"Menu", 0 },

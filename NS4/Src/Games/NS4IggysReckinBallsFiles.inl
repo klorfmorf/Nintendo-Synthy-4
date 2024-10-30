@@ -21,6 +21,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0*/
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Iggy's Reckin' Balls (U) 0000000F 00111EA8.mid", u8"Iggy's Reckin' Balls (U) 0000000F 00111EA8.mid TrackParseDebug.txt", u8"Acclaim Logo", 0 },
 { u8"Iggy's Reckin' Balls (U) 00000010 00112BE8.mid", u8"Iggy's Reckin' Balls (U) 00000010 00112BE8.mid TrackParseDebug.txt", u8"Iguana Entertainment", 0 },

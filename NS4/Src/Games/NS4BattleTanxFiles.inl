@@ -20,7 +20,11 @@
 //#define NS4_ROOT_OFFSET						12
 //#define NS4_PERC_CHANNEL					9
 #define NS4_WET_FILTER_FREQ					0.0//(NS4_ORIG_HZ / 2.0)
-//#define NS4_ENV_MULTIPLIER					(2.0)
+
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"BattleTanx (U) 00000006 002AA200 Main Theme.mid", u8"", u8"Main Theme", 0,
 	1, {

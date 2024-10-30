@@ -17,6 +17,10 @@
 #define NS4_EXPONENTIAL_ENVELOPE			true
 #define NS4_ROOT_OFFSET						12
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Uchhannanchan no Hono no Challenger - Denryu IraIra Bou (J) 00000000 007A4064.mid", u8"Uchhannanchan no Hono no Challenger - Denryu IraIra Bou (J) 00000000 007A4064.mid TrackParseDebug.txt", u8"Track 00", 0 },
 { u8"Uchhannanchan no Hono no Challenger - Denryu IraIra Bou (J) 00000001 007A46D8.mid", u8"Uchhannanchan no Hono no Challenger - Denryu IraIra Bou (J) 00000001 007A46D8.mid TrackParseDebug.txt", u8"Track 01", 0 },

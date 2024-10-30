@@ -15,12 +15,10 @@
 #define NS4_VIB_SCALE						2.0
 #define NS4_ENV_MULTIPLIER					(1.0 / 3.0)
 
-
 #define NS4_OVERSAMPLING					(1 << 2)
 #define NS4_OVERSAMPLING_BW					22050.0 / 2.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
-
 
 { u8"Mickey's Speedway USA (U) 00000001 016AC1A8.mid", u8"Mickey's Speedway USA (U) 00000001 016AC1A8.mid TrackParseDebug.txt", u8"Title", 0 },
 { u8"Mickey's Speedway USA (U) 00000027 016FEBE0.mid", u8"Mickey's Speedway USA (U) 00000027 016FEBE0.mid TrackParseDebug.txt", u8"Story", 0 },

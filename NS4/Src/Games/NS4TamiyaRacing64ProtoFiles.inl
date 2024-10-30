@@ -18,6 +18,11 @@
 #define NS4_EXPONENTIAL_ENVELOPE			true
 #define NS4_SND_BNK_FORCE_PERC_SAMPLE_RATE	22050 * 2
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Tamiya Racing 64 Proto 00000000 00DB99B4.mid", u8"Tamiya Racing 64 Proto 00000000 00DB99B4.mid TrackParseDebug.txt", u8"Title", 1 },
 { u8"Tamiya Racing 64 Proto 00000001 00DB9CA0.mid", u8"Tamiya Racing 64 Proto 00000001 00DB9CA0.mid TrackParseDebug.txt", u8"Demo", 1 },
 /*{ u8"Tamiya Racing 64 Proto 00000002 009BB9B4.mid", u8"Tamiya Racing 64 Proto 00000002 009BB9B4.mid TrackParseDebug.txt", u8"00000002 009BB9B4", 5 },

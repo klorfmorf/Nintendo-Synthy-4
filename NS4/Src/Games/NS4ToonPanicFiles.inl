@@ -15,6 +15,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Toon Panic (JP) (Proto) 00000000 006FBB94.mid", u8"Toon Panic (JP) (Proto) 00000000 006FBB94.mid TrackParseDebug.txt", u8"SELECT1", 0 },
 { u8"Toon Panic (JP) (Proto) 00000001 006FD42C.mid", u8"Toon Panic (JP) (Proto) 00000001 006FD42C.mid TrackParseDebug.txt", u8"SELECT2", 0 },

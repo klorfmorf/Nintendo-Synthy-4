@@ -14,7 +14,10 @@
 #define NS4_ENV_MULTIPLIER					1000.0
 #define NS4_ROOT_OFFSET						4
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid", u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid TrackParseDebug.txt", u8"カーバンクル", 0 },
 { u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid", u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid TrackParseDebug.txt", u8"00000001 007A17F4", 0 },

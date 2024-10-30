@@ -23,6 +23,10 @@
 //#define NS4_SAMPLE_EXCLUSIVE				0x42
 //#define NS4_IGNORE_REVERB					true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Worms - Armageddon (U) (M3) 00000000 00BDF934.mid", u8"Worms - Armageddon (U) (M3) 00000000 00BDF934.mid TrackParseDebug.txt", u8"Title and Menus", 0 },
 { u8"Worms - Armageddon (U) (M3) 00000001 00BE0490.mid", u8"Worms - Armageddon (U) (M3) 00000001 00BE0490.mid TrackParseDebug.txt", u8"Sudden Death", 0 },

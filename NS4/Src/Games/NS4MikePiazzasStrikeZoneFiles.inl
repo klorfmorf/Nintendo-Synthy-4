@@ -14,6 +14,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Mike Piazza's Strike Zone (U) 00000000 00BACB74.mid", u8"Mike Piazza's Strike Zone (U) 00000000 00BACB74.mid TrackParseDebug.txt", u8"Title Screen", 0 },	// Title Screen
 { u8"Mike Piazza's Strike Zone (U) 00000002 00BB473C.mid", u8"Mike Piazza's Strike Zone (U) 00000002 00BB473C.mid TrackParseDebug.txt", u8"Box Score", 0 },	// Box Score

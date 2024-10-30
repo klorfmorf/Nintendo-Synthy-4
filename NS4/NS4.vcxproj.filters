@@ -1090,5 +1090,8 @@
     <None Include="Src\Games\NS4GoldenEye007CustomFiles.inl">
       <Filter>Header Files\Games</Filter>
     </None>
+    <None Include="Src\Games\NS4OnegaiMonstersFiles.inl">
+      <Filter>Header Files\Games</Filter>
+    </None>
   </ItemGroup>
 </Project>

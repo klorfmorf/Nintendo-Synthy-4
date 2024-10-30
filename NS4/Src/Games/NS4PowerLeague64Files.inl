@@ -16,7 +16,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Power League Baseball 64 (J) 00000000 000F0634.mid", u8"Power League Baseball 64 (J) 00000000 000F0634.mid TrackParseDebug.txt", u8"00000000 000F0634", 0 },
 { u8"Power League Baseball 64 (J) 00000001 000F0934.mid", u8"Power League Baseball 64 (J) 00000001 000F0934.mid TrackParseDebug.txt", u8"00000001 000F0934", 0 },

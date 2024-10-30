@@ -246,7 +246,7 @@ int oldmain() {
 
 #if 0
 	// Tools somehow stopped being able to load .n64 files due to not automatically byte-swapping them.
-#define LSN_SWAP_ME			L"Super Mario 64 (Japan)"
+#define LSN_SWAP_ME			L"Onegai Monsters (Japan)"
 #define LSN_SWAP_ME_DIR		L"C:\\My Projects\\N64\\Roms\\"
 	{
 		const wchar_t * pu16ByteswapMe = LSN_SWAP_ME_DIR LSN_SWAP_ME L".n64";
@@ -327,7 +327,7 @@ int oldmain() {
 
 //#include "Src/Games/NS4DonkeyKong64Files.inl"
 //#include "Src/Games/NS4DonkeyKong64KioskFiles.inl"
-#include "Src/Games/NS4Turok3ShadowOfOblivion.inl"
+//#include "Src/Games/NS4Turok3ShadowOfOblivion.inl"
 //#include "Src/Games/NS4Turok2SeedsOfEvilFiles.inl"
 //#include "Src/Games/NS4TurokRageWars.inl"
 //#include "Src/Games/NS4TurokDinosaurHunterFiles.inl"
@@ -340,7 +340,7 @@ int oldmain() {
 //#include "Src/Games/NS4ExtremeGXG2Files.inl"
 //#include "Src/Games/NS4ChopperAttackFiles.inl"
 //#include "Src/Games/NS4ChopperAttackOverSampledFiles.inl"
-//#include "Src/Games/NS4BanjoKazooieFiles.inl"
+#include "Src/Games/NS4BanjoKazooieFiles.inl"
 //#include "Src/Games/NS4BlastCorpsFiles.inl"
 //#include "Src/Games/NS4BlastCorpsPALFiles.inl"
 //#include "Src/Games/NS4BeetAdventureRacing!Files.inl"
@@ -493,6 +493,8 @@ int oldmain() {
 //#include "Src/Games/NS4ItoiShigesatoNoBassTsuriNo1Files.inl"
 //#include "Src/Games/NS4TamiyaRacing64ProtoFiles.inl"
 //#include "Src/Games/NS4VirtualProWrestling64Files.inl"
+
+//#include "Src/Games/NS4OnegaiMonstersFiles.inl"
 #else
 		{}
 #endif

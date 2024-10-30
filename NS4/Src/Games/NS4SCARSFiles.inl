@@ -13,8 +13,10 @@
 #define NS4_PERC_CHANNEL					9
 //#define NS4_ROOT_OFFSET						-12
 
-
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"S.C.A.R.S. (U) 00000000 0005F184.mid", u8"S.C.A.R.S. (U) 00000000 0005F184.mid TrackParseDebug.txt", u8"00000000 0005F184", 0 },
 { u8"S.C.A.R.S. (U) 00000001 0005FC20.mid", u8"S.C.A.R.S. (U) 00000001 0005FC20.mid TrackParseDebug.txt", u8"00000001 0005FC20", 0 },

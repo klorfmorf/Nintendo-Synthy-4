@@ -17,7 +17,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Wonder Project J2 - Koruro no Mori no Jozet (J) 00000001 00731220.mid", u8"Wonder Project J2 - Koruro no Mori no Jozet (J) 00000001 00731220.mid TrackParseDebug.txt", u8"Theme of Colro Forest", 0 },
 { u8"Wonder Project J2 - Koruro no Mori no Jozet (J) 00000003 00731768.mid", u8"Wonder Project J2 - Koruro no Mori no Jozet (J) 00000003 00731768.mid TrackParseDebug.txt", u8"Goodbye Dr. Geppetto", 0 },

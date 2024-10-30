@@ -16,7 +16,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Chou Kuukan Night Pro Yakyuu King (J) 00000000 00AE740C.mid", u8"Chou Kuukan Night Pro Yakyuu King (J) 00000000 00AE740C.mid TrackParseDebug.txt", u8"00000000 00AE740C", 0 },
 { u8"Chou Kuukan Night Pro Yakyuu King (J) 00000001 00AE7514.mid", u8"Chou Kuukan Night Pro Yakyuu King (J) 00000001 00AE7514.mid TrackParseDebug.txt", u8"00000001 00AE7514", 0 },

@@ -17,6 +17,11 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Ken Griffey Jr.'s Slugfest (U) 00000030 00020898.mid", u8"Ken Griffey Jr.'s Slugfest (U) 00000030 00020898.mid TrackParseDebug.txt", u8"Title", 0 },
 { u8"Ken Griffey Jr.'s Slugfest (U) 00000033 00022378.mid", u8"Ken Griffey Jr.'s Slugfest (U) 00000033 00022378.mid TrackParseDebug.txt", u8"Menu", 0 },
 { u8"Ken Griffey Jr.'s Slugfest (U) 00000031 000215A8.mid", u8"Ken Griffey Jr.'s Slugfest (U) 00000031 000215A8.mid TrackParseDebug.txt", u8"Play Ball!", 0 },

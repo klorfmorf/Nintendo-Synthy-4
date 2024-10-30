@@ -18,6 +18,10 @@
 #define NS4_SND_BNK_FORCE_PERC_SAMPLE_RATE	(22050 * 2)
 #define NS4_NO_PROGRAM_CHANGE_SORT			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Saikyou Habu Shougi (J) 00000000 00751654.mid", u8"Saikyou Habu Shougi (J) 00000000 00751654.mid TrackParseDebug.txt", u8"Track 00", 0 },		// Menu
 { u8"Saikyou Habu Shougi (J) 00000001 00753618.mid", u8"Saikyou Habu Shougi (J) 00000001 00753618.mid TrackParseDebug.txt", u8"Track 01", 0 },

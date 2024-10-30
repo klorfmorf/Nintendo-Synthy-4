@@ -17,6 +17,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 //#define NS4_MASTER_REVERB_VOLUME			(2.0)
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Blast Corps (E) (M2) 00000011 0046A514.mid", u8"Blast Corps (E) (M2) 00000011 0046A514.mid TrackParseDebug.txt", u8"Title, Glory Crossing", 0 },
 { u8"Blast Corps (E) (M2) 00000021 0047917C.mid", u8"Blast Corps (E) (M2) 00000021 0047917C.mid TrackParseDebug.txt", u8"Menu", 0 },

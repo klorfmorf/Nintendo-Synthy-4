@@ -17,12 +17,10 @@
 #define NS4_EXPONENTIAL_ENVELOPE			true
 #define NS4_ROOT_OFFSET						12
 
-
 #define NS4_OVERSAMPLING					(1 << 2)
 #define NS4_OVERSAMPLING_BW					22050.0 / 2.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
-
 
 { u8"South Park (U) 0000000E 008E8474.mid", u8"South Park (U) 0000000E 008E8474.mid TrackParseDebug.txt", u8"Iguana Entertainment", 0 },
 { u8"South Park (U) 00000000 008D5504.mid", u8"South Park (U) 00000000 008D5504.mid TrackParseDebug.txt", u8"Operation: Turkey Butt 1, A Clone of Your Own 1, 2, 3, Close Encounters of the Bovine Kind 1, 2", 0 },

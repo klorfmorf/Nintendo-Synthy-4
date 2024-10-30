@@ -21,6 +21,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0*/
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Quest 64 (U) 0000001B 00ED2B1C.mid", u8"Quest 64 (U) 0000001B 00ED2B1C.mid TrackParseDebug.txt", u8"Holy Magic Century", 0 },
 { u8"Quest 64 (U) 0000000F 00EC61A8.mid", u8"Quest 64 (U) 0000000F 00EC61A8.mid TrackParseDebug.txt", u8"Melrode Monastery", 0 },

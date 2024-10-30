@@ -17,6 +17,10 @@
 #define NS4_PERC_CHANNEL					9
 //#define NS4_SND_BNK_FORCE_SAMPLE_RATE		22050
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Razor Freestyle Scooter (U) 00000000 004C2930.mid", u8"Razor Freestyle Scooter (U) 00000000 004C2930.mid TrackParseDebug.txt", u8"Track 00", 0 },
 { u8"Razor Freestyle Scooter (U) 00000001 004C42D0.mid", u8"Razor Freestyle Scooter (U) 00000001 004C42D0.mid TrackParseDebug.txt", u8"Track 01", 0 },

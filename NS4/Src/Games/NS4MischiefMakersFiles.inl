@@ -14,7 +14,10 @@
 //#define NS4_NO_PROGRAM_CHANGE_SORT			true
 //#define NS4_PROG_CHANGE_SETS_VOL_PAN		false
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Mischief Makers (U) (1.1) 00000000 00641DE4.mid", u8"Mischief Makers (U) (1.1) 00000000 00641DE4.mid TrackParseDebug.txt", u8"OBAKESONG", 0 },
 { u8"Mischief Makers (U) (1.1) 00000001 00642D18.mid", u8"Mischief Makers (U) (1.1) 00000001 00642D18.mid TrackParseDebug.txt", u8"NEO", 0 },

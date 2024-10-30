@@ -17,6 +17,11 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Hybrid Heaven (U) 00000000 0004E7D0.mid", u8"Hybrid Heaven (U) 00000000 0004E7D0.mid TrackParseDebug.txt", u8"00000000 0004E7D0", 0 },
 { u8"Hybrid Heaven (U) 00000001 0004E830.mid", u8"Hybrid Heaven (U) 00000001 0004E830.mid TrackParseDebug.txt", u8"00000001 0004E830", 0 },
 { u8"Hybrid Heaven (U) 00000002 0004E8C0.mid", u8"Hybrid Heaven (U) 00000002 0004E8C0.mid TrackParseDebug.txt", u8"00000002 0004E8C0", 0 },

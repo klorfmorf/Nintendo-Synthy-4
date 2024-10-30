@@ -14,6 +14,10 @@
 //#define NS4_OVERSAMPLING					(1 << 6)
 //#define NS4_OVERSAMPLING_BW					2500.0
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Eikou no Saint Andrews (J) 00000007 0071D50C.mid", u8"Eikou no Saint Andrews (J) 00000007 0071D50C.mid TrackParseDebug.txt", u8"Title Screen", 0 },
 { u8"Eikou no Saint Andrews (J) 00000004 0071C6BC.mid", u8"Eikou no Saint Andrews (J) 00000004 0071C6BC.mid TrackParseDebug.txt", u8"Menu Screen", 0 },

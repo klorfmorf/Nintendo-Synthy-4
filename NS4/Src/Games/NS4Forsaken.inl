@@ -18,7 +18,10 @@
 //#define NS4_ROOT_OFFSET						12
 //#define NS4_MAX_RATE						(22050 * 2)
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Forsaken 64 (U) 00000004 003CE90C.mid", u8"Forsaken 64 (U) 00000004 003CE90C.mid TrackParseDebug.txt", u8"Pyrolite", 0 },
 { u8"Forsaken 64 (U) 00000005 003CFCA8.mid", u8"Forsaken 64 (U) 00000005 003CFCA8.mid TrackParseDebug.txt", u8"Pure Power", 0 },

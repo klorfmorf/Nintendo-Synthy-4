@@ -34,6 +34,10 @@
 //#define NS4_CHANNEL_IDX_DETERMINES_PROGRAM	true
 //#define NS4_CHANNEL_DETERMINES_PROGRAM		true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Yoshi's Story (U) (M2) 0000000B 000B5460 Title Theme.mid", u8"Yoshi's Story (U) (M2) 0000000B 000B5460 Title Theme.mid TrackParseDebug.txt", u8"Yoshi Story", 0x0E },
 { u8"Yoshi's Story (U) (M2) 00000021 000B5460 Turn Page.mid", u8"Yoshi's Story (U) (M2) 00000021 000B5460 Turn Page.mid TrackParseDebug.txt", u8"The Story’s Beginning", 0x21 },

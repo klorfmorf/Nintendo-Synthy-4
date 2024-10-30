@@ -16,7 +16,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 //{ u8"Centre Court Tennis (E) 00000000 009761D0.mid", u8"Centre Court Tennis (E) 00000000 009761D0.mid TrackParseDebug.txt", u8"Title", 0 },
 { u8"Centre Court Tennis (E) 00000001 00976220.mid", u8"Centre Court Tennis (E) 00000001 00976220.mid TrackParseDebug.txt", u8"Title", 0 },

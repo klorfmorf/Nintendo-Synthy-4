@@ -19,7 +19,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 //#define NS4_EXPONENTIAL_ENVELOPE			true
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 //{ u8"Zool - Majou Tsukai Densetsu (J) 00000000 0021D634.mid", u8"Zool - Majou Tsukai Densetsu (J) 00000000 0021D634.mid TrackParseDebug.txt", u8"00000000 0021D634", 0 },
 { u8"Zool - Majou Tsukai Densetsu (J) 00000052 00251E78.mid", u8"Zool - Majou Tsukai Densetsu (J) 00000052 00251E78.mid TrackParseDebug.txt", u8"Imagineer Logo", 0 },

@@ -334,6 +334,7 @@
     <None Include="Src\Games\NS4MRCMultiRacingChampionshipFiles.inl" />
     <None Include="Src\Games\NS4NeonGenesisEvangelionFiles.inl" />
     <None Include="Src\Games\NS4NintamaRantarou64GameGalleryFiles.inl" />
+    <None Include="Src\Games\NS4OnegaiMonstersFiles.inl" />
     <None Include="Src\Games\NS4PennyRacersFiles.inl" />
     <None Include="Src\Games\NS4PennyRacersOverSamplingFiles.inl" />
     <None Include="Src\Games\NS4PerfectDarkFiles.inl" />

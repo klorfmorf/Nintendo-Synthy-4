@@ -35,7 +35,6 @@
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
 
-
 { u8"1 Mario Kart 64 (U) 00000001 00000001 Main Theme.mid", u8"Mario Kart 64 (U) 00000001 00BC5F60 Mario Kart 64 Theme.mid TrackParseDebug.txt", u8"Main Theme", 0x01 },
 { u8"2 Mario Kart 64 (U) 00000002 00000002 Setup and Kart Select.mid", u8"Mario Kart 64 (U) 00000002 00BC5F60 Setup and Kart Select.mid TrackParseDebug.txt", u8"Setup and Kart Select", 0x02 },
 { u8"3 Mario Kart 64 (U) 00000003 00000003 3 Raceways, Wario Stadium.mid", u8"Mario Kart 64 (U) 00000003 00BC5F60 3 Raceways, Wario Stadium.mid TrackParseDebug.txt", u8"3 Raceways, Wario Stadium", 0x03,

@@ -16,6 +16,11 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Chopper Attack (U) 00000000 0068561C.mid", u8"Chopper Attack (U) 00000000 0068561C.mid TrackParseDebug.txt", u8"Game Select", 0 },
 { u8"Chopper Attack (U) 00000001 00685D60.mid", u8"Chopper Attack (U) 00000001 00685D60.mid TrackParseDebug.txt", u8"Mission Overview", 0 },
 { u8"Chopper Attack (U) 0000000C 0069C160.mid", u8"Chopper Attack (U) 0000000C 0069C160.mid TrackParseDebug.txt", u8"Character Select", 0 },

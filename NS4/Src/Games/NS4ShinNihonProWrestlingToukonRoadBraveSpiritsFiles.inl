@@ -15,6 +15,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Shin Nihon Pro Wrestling - Toukon Road - Brave Spirits (J) 00000000 009779CC.mid", u8"Shin Nihon Pro Wrestling - Toukon Road - Brave Spirits (J) 00000000 009779CC.mid TrackParseDebug.txt", u8"Track 00", 0 },
 { u8"Shin Nihon Pro Wrestling - Toukon Road - Brave Spirits (J) 00000001 00979320.mid", u8"Shin Nihon Pro Wrestling - Toukon Road - Brave Spirits (J) 00000001 00979320.mid TrackParseDebug.txt", u8"Track 01", 0 },

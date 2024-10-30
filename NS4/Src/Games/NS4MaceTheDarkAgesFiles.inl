@@ -23,6 +23,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Mace - The Dark Age (U) 00000001 009EC0D4.mid", u8"", u8"Intro", 0 },
 { u8"Mace - The Dark Age (U) 0000000E 009FBBF4.mid", u8"", u8"Character Select", 0,

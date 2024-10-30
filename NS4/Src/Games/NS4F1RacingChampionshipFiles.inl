@@ -20,6 +20,11 @@
 #define NS4_WET_FILTER_FREQ					0.0//(NS4_ORIG_HZ / 2.0)
 //#define NS4_ENV_MULTIPLIER					(2.0)
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"F1 Racing Championship (E) (M5) 00000000 000E7444.mid", u8"", u8"00000000 000E7444", 0 },
 { u8"F1 Racing Championship (E) (M5) 00000001 001A2ACC.mid", u8"", u8"00000001 001A2ACC", 0 },
 { u8"F1 Racing Championship (E) (M5) 00000002 001A3880.mid", u8"", u8"00000002 001A3880", 0 },

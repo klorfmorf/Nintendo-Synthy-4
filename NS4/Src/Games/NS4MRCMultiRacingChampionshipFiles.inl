@@ -13,6 +13,10 @@
 //#define NS4_ROOT_OFFSET						12
 //#define NS4_ENV_MULTIPLIER					(0.25)
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"MRC - Multi Racing Championship (E) (M3) 00000000 007A222C.mid", u8"MRC - Multi Racing Championship (E) (M3) 00000000 007A222C.mid TrackParseDebug.txt", u8"00000000 007A222C", 0 },
 { u8"MRC - Multi Racing Championship (E) (M3) 00000001 007A2728.mid", u8"MRC - Multi Racing Championship (E) (M3) 00000001 007A2728.mid TrackParseDebug.txt", u8"00000001 007A2728", 0 },

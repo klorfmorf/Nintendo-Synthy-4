@@ -22,6 +22,10 @@
 //#define NS4_SAMPLE_EXCLUSIVE				0x42
 //#define NS4_IGNORE_REVERB					true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Micro Machines 64 Turbo (U) 00000000 002D57A0.mid", u8"Micro Machines 64 Turbo (U) 00000000 002D57A0.mid TrackParseDebug.txt", u8"Main Theme", 0 },
 { u8"Micro Machines 64 Turbo (U) 00000002 002D6C20.mid", u8"Micro Machines 64 Turbo (U) 00000002 002D6C20.mid TrackParseDebug.txt", u8"Course Select Theme", 0 },

@@ -16,8 +16,10 @@
 //#define NS4_OVERSAMPLING_BW					3500.0
 #define NS4_ENV_MULTIPLIER					(1.0 / 3.0)
 
-
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Conker's Bad Fur Day (U) 00000036 03F0582C.mid", u8"Conker's Bad Fur Day (U) 00000036 03F0582C.mid TrackParseDebug.txt", u8"Nintendo & Rare Logos", 0 },
 { u8"Conker's Bad Fur Day (U) 00000022 03EF3ADC.mid", u8"Conker's Bad Fur Day (U) 00000022 03EF3ADC.mid TrackParseDebug.txt", u8"The Cock and Plucker", 0, },

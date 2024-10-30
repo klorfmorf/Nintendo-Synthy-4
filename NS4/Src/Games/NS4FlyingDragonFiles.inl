@@ -17,6 +17,11 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Flying Dragon (U) 0000002E 00951928.mid", u8"Flying Dragon (U) 0000002E 00951928.mid TrackParseDebug.txt", u8"Logo", 0 },
 { u8"Flying Dragon (U) 0000001E 0094D384.mid", u8"Flying Dragon (U) 0000001E 0094D384.mid TrackParseDebug.txt", u8"Title (JP)", 0 },
 { u8"Flying Dragon (U) 00000007 0092FC50.mid", u8"Flying Dragon (U) 00000007 0092FC50.mid TrackParseDebug.txt", u8"Virtual Demo", 0 },

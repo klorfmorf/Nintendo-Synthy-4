@@ -19,7 +19,10 @@
 //#define NS4_SAMPLE_EXCLUSIVE				0x42
 //#define NS4_IGNORE_REVERB					true
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Doom 64 (U) (V1.1) 00000000 00642F30.mid", u8"Doom 64 (U) (V1.1) 00000000 00642F30.mid TrackParseDebug.txt", u8"00000000 00642F30", 0 },
 { u8"Doom 64 (U) (V1.1) 00000001 00642F50.mid", u8"Doom 64 (U) (V1.1) 00000001 00642F50.mid TrackParseDebug.txt", u8"00000001 00642F50", 0 },

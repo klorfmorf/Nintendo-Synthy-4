@@ -22,6 +22,10 @@
 //#define NS4_SAMPLE_EXCLUSIVE				0x42
 //#define NS4_IGNORE_REVERB					true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Starshot - Space Circus Fever (U) (M3) 00000000 000F2C90.mid", u8"Starshot - Space Circus Fever (U) (M3) 00000000 000F2C90.mid TrackParseDebug.txt", u8"Intro", 0 },
 { u8"Starshot - Space Circus Fever (U) (M3) 00000001 0021439A.mid", u8"Starshot - Space Circus Fever (U) (M3) 00000001 0021439A.mid TrackParseDebug.txt", u8"00000001 0021439A", 0 },

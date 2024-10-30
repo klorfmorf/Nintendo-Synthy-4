@@ -17,6 +17,11 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Famista 64 (J) 00000000 00A15F68.mid", u8"Famista 64 (J) 00000000 00A15F68.mid TrackParseDebug.txt", u8"00000000 00A15F68", 0 },
 { u8"Famista 64 (J) 00000001 00A15FCC.mid", u8"Famista 64 (J) 00000001 00A15FCC.mid TrackParseDebug.txt", u8"00000001 00A15FCC", 0 },
 { u8"Famista 64 (J) 00000002 00A16494.mid", u8"Famista 64 (J) 00000002 00A16494.mid TrackParseDebug.txt", u8"00000002 00A16494", 0 },

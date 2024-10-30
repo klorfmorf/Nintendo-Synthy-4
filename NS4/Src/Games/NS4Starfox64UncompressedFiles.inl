@@ -33,6 +33,11 @@
 												{ NS4_CRC_SAMP_NL( u8"060prMutePet.w.32.as4", 0x1C90B455, 8000.0 ) },					\
 											}
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Star Fox 64 (U) (V1.1) 00000023 000C4260.mid", u8"Star Fox 64 (U) (V1.1) 00000023 000C4260.mid TrackParseDebug.txt", u8"Opening", 0x15,
 	2,
 	{

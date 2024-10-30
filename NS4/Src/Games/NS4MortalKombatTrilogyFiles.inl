@@ -23,6 +23,10 @@
 //#define NS4_SAMPLE_EXCLUSIVE				0x42
 //#define NS4_IGNORE_REVERB					true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Mortal Kombat Trilogy (U) (V1.2) 00000000 00AA7836.mid", u8"Mortal Kombat Trilogy (U) (V1.2) 00000000 00AA7836.mid TrackParseDebug.txt", u8"00000000 00AA7836", 0 },
 { u8"Mortal Kombat Trilogy (U) (V1.2) 00000001 00AA7854.mid", u8"Mortal Kombat Trilogy (U) (V1.2) 00000001 00AA7854.mid TrackParseDebug.txt", u8"00000001 00AA7854", 0 },

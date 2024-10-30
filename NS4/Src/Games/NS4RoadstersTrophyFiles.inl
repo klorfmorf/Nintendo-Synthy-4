@@ -18,6 +18,11 @@
 #define NS4_WET_FILTER_FREQ					0.0//(NS4_ORIG_HZ / 2.0)
 //#define NS4_ENV_MULTIPLIER					(2.0)
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Roadsters Trophy (U) (M3) 00000005 00A9FC60.mid", u8"", u8"Menu", 0,
 	1, {
 		{ ns4::CMidiFile::NS4_ES_POST_SUPPLEMENTAL, ns4::CMidiFile::NS4_E_AUTO_LOOP, 0, 1, 0, { 1, 1, 1, 30 } },

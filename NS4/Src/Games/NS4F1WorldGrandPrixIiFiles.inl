@@ -16,6 +16,11 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"F-1 World Grand Prix II (E) (M4) 0000000C 00AC4D38.mid", u8"F-1 World Grand Prix II (E) (M4) 0000000C 00AC4D38.mid TrackParseDebug.txt", u8"Main Menu", 0 },
 { u8"F-1 World Grand Prix II (E) (M4) 00000008 00AC0B64.mid", u8"F-1 World Grand Prix II (E) (M4) 00000008 00AC0B64.mid TrackParseDebug.txt", u8"Opening", 0 },
 { u8"F-1 World Grand Prix II (E) (M4) 00000009 00AC1158.mid", u8"F-1 World Grand Prix II (E) (M4) 00000009 00AC1158.mid TrackParseDebug.txt", u8"Intro", 0 },

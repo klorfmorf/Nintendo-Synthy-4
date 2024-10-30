@@ -21,6 +21,10 @@
 //#define NS4_SAMPLE_EXCLUSIVE				0x42
 //#define NS4_IGNORE_REVERB					true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Army Men - Air Combat (U) 00000005 006E5210.mid", u8"Army Men - Air Combat (U) 00000005 006E5210.mid TrackParseDebug.txt", u8"Main Theme", 0,
 	1,

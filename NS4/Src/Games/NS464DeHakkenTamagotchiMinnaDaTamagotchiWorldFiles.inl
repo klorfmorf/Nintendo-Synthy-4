@@ -21,7 +21,10 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0*/
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"64 de Hakken!! Tamagotchi Minna de Tamagotchi World (J) 00000000 002E2548.mid", u8"64 de Hakken!! Tamagotchi Minna de Tamagotchi World (J) 00000000 002E2548.mid TrackParseDebug.txt", u8"Follow to Earth?", 0 },
 { u8"64 de Hakken!! Tamagotchi Minna de Tamagotchi World (J) 00000001 002E3488.mid", u8"64 de Hakken!! Tamagotchi Minna de Tamagotchi World (J) 00000001 002E3488.mid TrackParseDebug.txt", u8"Professor Banzo’s Twilight", 0 },

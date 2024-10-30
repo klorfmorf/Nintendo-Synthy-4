@@ -14,6 +14,11 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"F-1 Pole Position 64 (U) (M3) 00000008 0074F458.mid", u8"F-1 Pole Position 64 (U) (M3) 00000008 0074F458.mid TrackParseDebug.txt", u8"Intro", 0 },
 { u8"F-1 Pole Position 64 (U) (M3) 00000005 0074BDF0.mid", u8"F-1 Pole Position 64 (U) (M3) 00000005 0074BDF0.mid TrackParseDebug.txt", u8"Main Menu", 0 },
 { u8"F-1 Pole Position 64 (U) (M3) 00000002 00745740.mid", u8"F-1 Pole Position 64 (U) (M3) 00000002 00745740.mid TrackParseDebug.txt", u8"Driver Select", 0 },

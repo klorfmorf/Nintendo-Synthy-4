@@ -16,6 +16,11 @@
 #define NS4_ENVELOPE_VOL_CURVE				20.0
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 { u8"Armorines - Project S.W.A.R.M. (U) 00000002 004E7D9C.mid", u8"Armorines - Project S.W.A.R.M. (U) 00000002 004E7D9C.mid TrackParseDebug.txt", u8"Main Menu", 0 },
 { u8"Armorines - Project S.W.A.R.M. (U) 0000001D 004F2184.mid", u8"Armorines - Project S.W.A.R.M. (U) 0000001D 004F2184.mid TrackParseDebug.txt", u8"Siberia: Mission 1 Intro", 0 },
 { u8"Armorines - Project S.W.A.R.M. (U) 00000014 004EF17C.mid", u8"Armorines - Project S.W.A.R.M. (U) 00000014 004EF17C.mid TrackParseDebug.txt", u8"Siberia: Mission 1, 2, 4", 0 },
