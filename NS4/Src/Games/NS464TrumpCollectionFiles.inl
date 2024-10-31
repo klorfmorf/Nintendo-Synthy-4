@@ -16,6 +16,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"64 Trump Collection - Alice no Wakuwaku Trump World (J) 00000000 0089F7E4.mid", u8"64 Trump Collection - Alice no Wakuwaku Trump World (J) 00000000 0089F7E4.mid TrackParseDebug.txt", u8"Track 00", 0 },
 { u8"64 Trump Collection - Alice no Wakuwaku Trump World (J) 00000001 008A24DC.mid", u8"64 Trump Collection - Alice no Wakuwaku Trump World (J) 00000001 008A24DC.mid TrackParseDebug.txt", u8"Track 01", 0 },

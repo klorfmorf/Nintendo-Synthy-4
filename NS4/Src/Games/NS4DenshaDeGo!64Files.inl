@@ -3,11 +3,11 @@
 #define NS4_YEAR							u8"1999"
 #define NS4_FOLDER							u8"Densha de Go! 64"
 #define NS4_BANK							u8"01"
-#define NS4_REVERB_TRACKS					1
-#define NS4_REVERB							ns4::CReverb::NS4_T_SUPER_ROBOT_SPIRITS_0
+#define NS4_REVERB_TRACKS					0
+//#define NS4_REVERB							ns4::CReverb::NS4_T_SUPER_ROBOT_SPIRITS_0
 #define NS4_ORIG_HZ							22047
 #define NS4_CURVE							40.0
-#define NS4_OUT_DIRECTORY					u8"T:\\N64OST\\Densha de Go! 64\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Densha de Go! 64\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_WET_FILTER_FREQ					0.0//(NS4_ORIG_HZ / 2.0)
 #define NS4_ENV_MULTIPLIER					(1.0 / 3.0)
@@ -16,7 +16,7 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 
 #define NS4_OVERSAMPLING					(1 << 2)
-#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
 
@@ -32,9 +32,9 @@
 { u8"Densha de Go! 64 (J) 0000000E 01A9CA00.mid", u8"Densha de Go! 64 (J) 0000000E 01A9CA00.mid TrackParseDebug.txt", u8"Staff Roll", 0 },
 { u8"Densha de Go! 64 (J) 0000000B 01A988F8.mid", u8"Densha de Go! 64 (J) 0000000B 01A988F8.mid TrackParseDebug.txt", u8"Take Me Sunset (Ending)", 0 },
 { u8"Densha de Go! 64 (J) 00000007 01A96FD0.mid", u8"Densha de Go! 64 (J) 00000007 01A96FD0.mid TrackParseDebug.txt", u8"Ding Dong", 0 },
-{ u8"Densha de Go! 64 (J) 00000005 01A96F00.mid", u8"Densha de Go! 64 (J) 00000005 01A96F00.mid TrackParseDebug.txt", u8"Unknown 1", 0 },
-{ u8"Densha de Go! 64 (J) 00000006 01A96F70.mid", u8"Densha de Go! 64 (J) 00000006 01A96F70.mid TrackParseDebug.txt", u8"Unknown 2", 0 },
-{ u8"Densha de Go! 64 (J) 00000008 01A97030.mid", u8"Densha de Go! 64 (J) 00000008 01A97030.mid TrackParseDebug.txt", u8"Unknown 3", 0 },
-{ u8"Densha de Go! 64 (J) 0000000F 01A9EB58.mid", u8"Densha de Go! 64 (J) 0000000F 01A9EB58.mid TrackParseDebug.txt", u8"Unknown 4", 0 },
-{ u8"Densha de Go! 64 (J) 00000010 01A9EBB8.mid", u8"Densha de Go! 64 (J) 00000010 01A9EBB8.mid TrackParseDebug.txt", u8"Unknown 5", 0 },
-{ u8"Densha de Go! 64 (J) 00000011 01A9EC18.mid", u8"Densha de Go! 64 (J) 00000011 01A9EC18.mid TrackParseDebug.txt", u8"Unknown 6", 0 },
+{ u8"Densha de Go! 64 (J) 00000005 01A96F00.mid", u8"Densha de Go! 64 (J) 00000005 01A96F00.mid TrackParseDebug.txt", u8"Jingle 1", 0 },
+{ u8"Densha de Go! 64 (J) 00000006 01A96F70.mid", u8"Densha de Go! 64 (J) 00000006 01A96F70.mid TrackParseDebug.txt", u8"Jingle 2", 0 },
+{ u8"Densha de Go! 64 (J) 00000008 01A97030.mid", u8"Densha de Go! 64 (J) 00000008 01A97030.mid TrackParseDebug.txt", u8"Jingle 3", 0 },
+{ u8"Densha de Go! 64 (J) 0000000F 01A9EB58.mid", u8"Densha de Go! 64 (J) 0000000F 01A9EB58.mid TrackParseDebug.txt", u8"Jingle 4", 0 },
+{ u8"Densha de Go! 64 (J) 00000010 01A9EBB8.mid", u8"Densha de Go! 64 (J) 00000010 01A9EBB8.mid TrackParseDebug.txt", u8"Jingle 5", 0 },
+{ u8"Densha de Go! 64 (J) 00000011 01A9EC18.mid", u8"Densha de Go! 64 (J) 00000011 01A9EC18.mid TrackParseDebug.txt", u8"Jingle 6", 0 },
