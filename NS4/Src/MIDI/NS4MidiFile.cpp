@@ -694,9 +694,9 @@ namespace ns4 {
 					// 00000927 Time: 00000000 PitchBend 40 (0) Length 872A (1836)
 					if ( std::sscanf( sLine.c_str(), "%X Time: %X PitchBend %X (%d) Length %X (%u)", &ui32Tmp0, &ui32Tmp1, &ui32Tmp2, &ui32Tmp3, &ui32Tmp4, &ui32Tmp5 ) == 6 ) {
 						if ( i32OffsetTrack > 0 && i32OffsetTrack < m_vTracks.size() ) {
-							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, NS4_TRK_SET_PITCH_SCALE, uint8_t( ui32Tmp3 ), i32Chan, ui32Tmp1, nullptr );
-							/*NS4_TRACK_EVENT teEvent = CreatePitchBend( (int32_t( ui32Tmp3 ) * 128) / 8191.0, ui32Tmp1, uint8_t( i32Chan ) );
-							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, teEvent, nullptr );*/
+							//InsertEvent( m_vTracks[i32OffsetTrack].vEvents, NS4_TRK_SET_PITCH_SCALE, uint8_t( ui32Tmp3 ), i32Chan, ui32Tmp1, nullptr );
+							NS4_TRACK_EVENT teEvent = CreatePitchBend( (int32_t( ui32Tmp3 ) * 128) / 8191.0, ui32Tmp1, uint8_t( i32Chan ) );
+							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, teEvent, nullptr );
 						}
 					}
 					// 00000B5A Time: 00000C00 Command: A8  Pitch Bend 02 (2)
@@ -2561,6 +2561,10 @@ namespace ns4 {
 						}
 
 						RenderSample( _troOptions, _pmMods[I], aResult, _paWet, vSampleMods, _sSettings );
+						break;
+					}
+					case NS4_E_STOP_SAMPLE_AT_TRACK_END : {
+						m_sSettings.bManualSamplesStopAtTrackEnd = _pmMods[I].ui32Operand0 != 0;
 						break;
 					}
 					case NS4_E_FADE_AT : {
@@ -4985,9 +4989,9 @@ namespace ns4 {
 			}
 			dLastTime = dCurTime;
 			tbWavTime.Tick();
-			/*if ( _troOptions.uiMaxSamples <= tbWavTime.CurTick() ) {
+			if ( m_sSettings.bManualSamplesStopAtTrackEnd && _troOptions.uiMaxSamples <= tbWavTime.CurTick() ) {
 				break;
-			}*/
+			}
 		}
 		
 	}

@@ -306,7 +306,7 @@ int oldmain() {
 //#include "Src/Games/NS4ConkersBadFurDayFiles.inl"
 //#include "Src/Games/NS4ConkersBadFurDayECTSFiles.inl"
 //#include "Src/Games/NS4DinosaurPlanetFiles.inl"
-//#include "Src/Games/NS4JetForceGeminiFiles.inl"
+#include "Src/Games/NS4JetForceGeminiFiles.inl"
 //#include "Src/Games/NS4JetForceGemini2Files.inl"
 //#include "Src/Games/NS4JetForceGeminiKioskFiles.inl"
 //#include "Src/Games/NS4PerfectDarkFiles.inl"
@@ -453,7 +453,7 @@ int oldmain() {
 //#include "Src/Games/NS4SimCity2000Files.inl"
 //#include "Src/Games/NS4SuperBDamonBattlePhoenix64Files.inl"
 //#include "Src/Games/NS4ToonPanicFiles.inl"
-//#include "Src/Games/NS4ToonPanicOverSampledFiles.inl"
+//#include "Src/Games/NS4ToonPanicOverSampledFiles.inl"ns4kirb
 //#include "Src/Games/NS4AeroGaugeFiles.inl"
 //#include "Src/Games/NS4AeroGaugeOverSamplingFiles.inl"
 //#include "Src/Games/NS4AllStarBaseball99Files.inl"
@@ -467,7 +467,7 @@ int oldmain() {
 //#include "Src/Games/NS464DeHakkenTamagotchiMinnaDaTamagotchiWorldFiles.inl"
 //#include "Src/Games/NS464TrumpCollectionFiles.inl"
 //#include "Src/Games/NS4CentreCourtTennisFiles.inl"
-#include "Src/Games/NS4GetterLoveFiles.inl"
+//#include "Src/Games/NS4GetterLoveFiles.inl"
 //#include "Src/Games/NS4ShinNihonProWrestlingToukonRoadBraveSpiritsFiles.inl"
 //#include "Src/Games/NS4ShinNihonProWrestlingToukonRoad2TheNextGenerationFiles.inl"
 //#include "Src/Games/NS4HamsterMonogatari64Files.inl"
@@ -638,6 +638,7 @@ int oldmain() {
 #endif	// NS4_ONE_OFF
 		mfMidi.Reset();
 		double dCursor = 0.0;
+		ns4::CMidiFile::m_sSettings.bManualSamplesStopAtTrackEnd = false;
 		ns4::CMidiFile::m_sSettings.ui8LpfControl = 34;
 		ns4::CMidiFile::m_sSettings.ui8QControl = 33;
 		ns4::CMidiFile::m_sSettings.ui8StereoEffectControl = 65;

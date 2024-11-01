@@ -40,7 +40,8 @@
 { u8"Duke Nukem - ZER0 H0UR (U) 00000009 01DAA7F0.mid", u8"Duke Nukem - ZER0 H0UR (U) 00000009 01DAA7F0.mid TrackParseDebug.txt", u8"Victorian - 2", 0x04 },
 { u8"Duke Nukem - ZER0 H0UR (U) 0000000B 01F05500.mid", u8"Duke Nukem - ZER0 H0UR (U) 0000000B 01F05500.mid TrackParseDebug.txt", u8"Final - Alien Mother", 0x06 },
 { u8"Duke Nukem - ZER0 H0UR (U) 00000006 01D2DC30.mid", u8"Duke Nukem - ZER0 H0UR (U) 00000006 01D2DC30.mid TrackParseDebug.txt", u8"Elevator Music", 0,
-	3, {
+	4, {
+		{ ns4::CMidiFile::NS4_ES_POST_SYNTHESIS, ns4::CMidiFile::NS4_E_STOP_SAMPLE_AT_TRACK_END, 0, true },
 		{ NS4_PLAY_SAMPLE( u8"C:\\My Projects\\MIDIWorks\\Exports\\Duke Nukem - ZER0 H0UR\\Samples\\B00I3C2S00.wav",
 			1, 1, 1, 0, 60 - 10, 0, 1.0, 64, 0, 60, 0, 0, 127, 64, 1.0, 0, 0, 0, 0, 0, 0, 0, 0 )
 		},

@@ -16,6 +16,11 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 //#define NS4_EXPONENTIAL_ENVELOPE			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 
 //{ u8"Jinsei Game 64 (J) 00000000 00D605F4.mid", u8"Jinsei Game 64 (J) 00000000 00D605F4.mid TrackParseDebug.txt", u8"Track 00", 0 },
 { u8"Jinsei Game 64 (J) 00000001 00D60644.mid", u8"Jinsei Game 64 (J) 00000001 00D60644.mid TrackParseDebug.txt", u8"Track 01", 0 },

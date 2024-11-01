@@ -69,6 +69,7 @@ NS4_ENUM( NS4_E_PLAY_SAMPLE ),									/**< Plays a given sample at the given ti
 NS4_ENUM( NS4_E_SAMPLE_SET_CONTROL ),							/**< Sets a control at a given time to impact the last NS4_E_PLAY_SAMPLE playback. */
 NS4_ENUM( NS4_E_SAMPLE_INSERT_CONTROL_LINE ),					/**< Inserts a series of controls at a given time to impact the last NS4_E_PLAY_SAMPLE playback. */
 NS4_ENUM( NS4_E_SAMPLE_END ),									/**< Stops the playback of the current sample. */
+NS4_ENUM( NS4_E_STOP_SAMPLE_AT_TRACK_END ),						/**< Stops the sample at the end of the allocated track.  If not set, samples can extend the given track to accomodate themselves. */
 NS4_ENUM( NS4_E_FADE_AT ),										/**< Fades the rendered result at the given time.  Uses the same fade as the global fade, which will also be applied.  ui32Channel = number of loops, tsTime0 is an additional time offset, and dOperandDouble0 is an additional seconds offset. */
 NS4_ENUM( NS4_E_ADD_MIDI_FILE ),								/**< Loads the given MIDI file (pcStringOp), appending it to the end of the current list of tracks.  If ui32Operand0 is non-zero, the first track of the loaded MIDI file is not appended. */
 NS4_ENUM( NS4_E_GLOBAL_SET_PERC_RELEASE_ADSR ),					/**< Sets the ADSR percussion release rate for a given track. */
