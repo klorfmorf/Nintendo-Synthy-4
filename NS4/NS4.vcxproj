@@ -226,6 +226,7 @@
     <None Include="Src\Games\NS4AeroGaugeFiles.inl" />
     <None Include="Src\Games\NS4AeroGaugeOverSamplingFiles.inl" />
     <None Include="Src\Games\NS4AllStarBaseball2000Files.inl" />
+    <None Include="Src\Games\NS4AllStarBaseball2001Files.inl" />
     <None Include="Src\Games\NS4AllStarBaseball99Files.inl" />
     <None Include="Src\Games\NS4ArmorinesProjectSWARMFiles.inl" />
     <None Include="Src\Games\NS4ArmyMenAirCombatFiles.inl" />
@@ -480,6 +481,7 @@
     <None Include="Src\Reverb\Taps\NS4ReverbPokemonSnap0.inl" />
     <None Include="Src\Reverb\Taps\NS4ReverbPokemonSnap1.inl" />
     <None Include="Src\Reverb\Taps\NS4ReverbProMahjongKiwame640.inl" />
+    <None Include="Src\Reverb\Taps\NS4ReverbPuyoPuyoSun640.inl" />
     <None Include="Src\Reverb\Taps\NS4ReverbRayman2TheGreatEscape0.inl" />
     <None Include="Src\Reverb\Taps\NS4ReverbRobotPonkottsu640.inl" />
     <None Include="Src\Reverb\Taps\NS4ReverbSCARS0.inl" />

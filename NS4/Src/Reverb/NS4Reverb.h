@@ -646,6 +646,12 @@ namespace ns4 {
 		/** The comb filter delay lines for Conker's Bad Fur Day ESTC. */
 		static NS4_DELAY_N64					m_dn64ConkersBadFurDayECTS0[];
 
+		/** Taps harvested from Puyo Puyo Sun 64. */
+		static NS4_REVERB_TAP					m_rtPuyoPuyoSun640[];
+
+		/** The comb filter delay lines for Puyo Puyo Sun 64. */
+		static NS4_DELAY_N64					m_dn64PuyoPuyoSun640[];
+
 		struct NS4_REVERB_ENUM {
 			const char *						pcName;
 			int32_t								i32Val;

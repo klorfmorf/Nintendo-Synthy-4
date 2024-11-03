@@ -1619,6 +1619,22 @@ namespace ns4 {
 
 	};
 
+	/** Taps harvested from Puyo Puyo Sun 64. */
+	NS4_REVERB_TAP CReverb::m_rtPuyoPuyoSun640[] = {
+#include "Taps/NS4ReverbPuyoPuyoSun640.inl"
+	};
+
+	/** The comb filter delay lines for Puyo Puyo Sun 64. */
+	NS4_DELAY_N64 CReverb::m_dn64PuyoPuyoSun640[] = {
+		//ui32Input		ui32Output	i16FfCoef		i16FbCoef		i16Gain							 dRsInc						 dRsVal			i32RsDelta						dRsGain						ui16Fc
+		{         0,	         0,	    +4276,		    -4276,	      12582,		                      0,	                      0,		        +0,		                      0,	/*0xDFF289A0*/     244 },
+		{         0,	      1584,	   +15702,		       +0,	      20498 },
+		{        16,	       608,	    +3128,		    -3128,	      16424 },
+		{         0,	       864,	       +0,		    -5432,	       7990,		                      0,	                      0,		        +0,		                      0,	/*0xDFF289E0*/    1008 },
+		{        32,	      3840,	    +9830,		    -9830,	      28694,		                      0,	                      0,		        +0,		                      0,	/*0xDFF28A20*/    9229 },
+
+	};
+
 }	// namespace ns4
 
 namespace ns4 {
@@ -2894,6 +2910,20 @@ namespace ns4 {
 			false,																	// bSwapSrcReverb
 			true,																	// bRChanIsInvertLChan
 		},	// 176
+
+		// Puyo Puyo Sun 64.
+		{
+			NS4_ONLY_COMB( 1.0, 0 ),
+			NS4_COMB( 6400, 320 / 2, m_dn64PuyoPuyoSun640, 20.0 ),
+		},	// 177
+		// Puyo Puyo Sun 64.
+		{
+			NS4_TAPS( m_rtPuyoPuyoSun640 ),
+			NS4_SQRT_0_5,															// dTapVol
+			0,																		// i64TapOffset
+			NS4_NO_FADE,
+			NS4_NO_LPF,
+		},	// 178
 	};
 
 
