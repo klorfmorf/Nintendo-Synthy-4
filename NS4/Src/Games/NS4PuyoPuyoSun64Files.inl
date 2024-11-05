@@ -11,49 +11,56 @@
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_WET_FILTER_FREQ					0.0
 #define NS4_PERC_CHANNEL					9
-#define NS4_ENV_MULTIPLIER					1000.0
+//#define NS4_ENV_MULTIPLIER					1000.0
 #define NS4_ROOT_OFFSET						4
+#define NS4_ENV_MULTIPLIER					(1.0 / 1.0)
+#define NS4_REL_MULTIPLIER					(1.0 / 1.0)
+#define NS4_PERC_REL_MULTIPLIER				20.0
+#define NS4_ENVELOPE_VOL_CURVE				20.0
+#define NS4_ENVELOPE_POINT_CURVE			40.0
+#define NS4_EXPONENTIAL_ENVELOPE			true
 
 #define NS4_OVERSAMPLING					(1 << 2)
 #define NS4_OVERSAMPLING_BW					22050.0 / 2.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
 
-{ u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid", u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid TrackParseDebug.txt", u8"カーバンクル", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid", u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid TrackParseDebug.txt", u8"00000001 007A17F4", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid", u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid TrackParseDebug.txt", u8"00000002 007A19E0", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid", u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid TrackParseDebug.txt", u8"00000003 007A1CB8", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid", u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid TrackParseDebug.txt", u8"ＲＥＳＵＬＴ", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid", u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid TrackParseDebug.txt", u8"00000005 007A2E94", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid", u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid TrackParseDebug.txt", u8"00000006 007A3FC4", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid", u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid TrackParseDebug.txt", u8"00000007 007A5B34", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid", u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid TrackParseDebug.txt", u8"00000008 007A75D4", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid", u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid TrackParseDebug.txt", u8"00000009 007A9764", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid", u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid TrackParseDebug.txt", u8"0000000A 007AB6F8", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid", u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid TrackParseDebug.txt", u8"0000000B 007ADBDC", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid", u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid TrackParseDebug.txt", u8"0000000C 007AEDE0", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid", u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid TrackParseDebug.txt", u8"0000000D 007AF3C4", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid", u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid TrackParseDebug.txt", u8"0000000E 007AFA48", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid", u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid TrackParseDebug.txt", u8"0000000F 007AFD54", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid", u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid TrackParseDebug.txt", u8"00000010 007B059C", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid", u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid TrackParseDebug.txt", u8"00000011 007B1800", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid", u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid TrackParseDebug.txt", u8"00000012 007B1EEC", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid", u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid TrackParseDebug.txt", u8"00000013 007B2C28", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid", u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid TrackParseDebug.txt", u8"00000014 007B31B0", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid", u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid TrackParseDebug.txt", u8"00000015 007B41A8", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid", u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid TrackParseDebug.txt", u8"00000016 007B5074", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid", u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid TrackParseDebug.txt", u8"00000017 007B5ACC", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid", u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid TrackParseDebug.txt", u8"00000018 007B6CA4", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid", u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid TrackParseDebug.txt", u8"00000019 007B7458", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid", u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid TrackParseDebug.txt", u8"0000001A 007B7970", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid", u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid TrackParseDebug.txt", u8"0000001B 007B866C", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid", u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid TrackParseDebug.txt", u8"0000001C 007B8C90", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid", u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid TrackParseDebug.txt", u8"0000001D 007BD38C", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid", u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid TrackParseDebug.txt", u8"0000001E 007C1A88", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid", u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid TrackParseDebug.txt", u8"0000001F 007C2C10", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid", u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid TrackParseDebug.txt", u8"00000020 007C3314", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid", u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid TrackParseDebug.txt", u8"00000021 007C39DC", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid", u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid TrackParseDebug.txt", u8"00000022 007C4574", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid", u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid TrackParseDebug.txt", u8"Track 00", 0 },			// カーバンクル
+{ u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid", u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid TrackParseDebug.txt", u8"Track 01", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid", u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid TrackParseDebug.txt", u8"Track 02", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid", u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid TrackParseDebug.txt", u8"Track 03", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid", u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid TrackParseDebug.txt", u8"Track 04", 0 },			// ＲＥＳＵＬＴ
+{ u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid", u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid TrackParseDebug.txt", u8"Track 05", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid", u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid TrackParseDebug.txt", u8"Track 06", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid", u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid TrackParseDebug.txt", u8"Track 07", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid", u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid TrackParseDebug.txt", u8"Track 08", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid", u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid TrackParseDebug.txt", u8"Track 09", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid", u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid TrackParseDebug.txt", u8"Track 0A", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid", u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid TrackParseDebug.txt", u8"Track 0B", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid", u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid TrackParseDebug.txt", u8"Track 0C", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid", u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid TrackParseDebug.txt", u8"Track 0D", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid", u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid TrackParseDebug.txt", u8"Track 0E", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid", u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid TrackParseDebug.txt", u8"Track 0F", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid", u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid TrackParseDebug.txt", u8"Track 10", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid", u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid TrackParseDebug.txt", u8"Track 11", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid", u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid TrackParseDebug.txt", u8"Track 12", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid", u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid TrackParseDebug.txt", u8"Track 13", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid", u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid TrackParseDebug.txt", u8"Track 14", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid", u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid TrackParseDebug.txt", u8"Track 15", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid", u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid TrackParseDebug.txt", u8"Track 16", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid", u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid TrackParseDebug.txt", u8"Track 17", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid", u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid TrackParseDebug.txt", u8"Track 18", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid", u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid TrackParseDebug.txt", u8"Track 19", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid", u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid TrackParseDebug.txt", u8"Track 1A", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid", u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid TrackParseDebug.txt", u8"Track 1B", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid", u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid TrackParseDebug.txt", u8"Track 1C", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid", u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid TrackParseDebug.txt", u8"Track 1D", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid", u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid TrackParseDebug.txt", u8"Track 1E", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid", u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid TrackParseDebug.txt", u8"Track 1F", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid", u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid TrackParseDebug.txt", u8"Track 20", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid", u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid TrackParseDebug.txt", u8"Track 21", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid", u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid TrackParseDebug.txt", u8"Track 22", 0 },
+/*
 { u8"Puyo Puyo Sun 64 (J) 00000023 007C4A58.mid", u8"Puyo Puyo Sun 64 (J) 00000023 007C4A58.mid TrackParseDebug.txt", u8"00000023 007C4A58", 0 },
 { u8"Puyo Puyo Sun 64 (J) 00000024 007C4AB4.mid", u8"Puyo Puyo Sun 64 (J) 00000024 007C4AB4.mid TrackParseDebug.txt", u8"00000024 007C4AB4", 0 },
 { u8"Puyo Puyo Sun 64 (J) 00000025 007C4B10.mid", u8"Puyo Puyo Sun 64 (J) 00000025 007C4B10.mid TrackParseDebug.txt", u8"00000025 007C4B10", 0 },
@@ -379,3 +386,4 @@
 { u8"Puyo Puyo Sun 64 (J) 00000165 007CF178.mid", u8"Puyo Puyo Sun 64 (J) 00000165 007CF178.mid TrackParseDebug.txt", u8"00000165 007CF178", 0 },
 { u8"Puyo Puyo Sun 64 (J) 00000166 007CF1D4.mid", u8"Puyo Puyo Sun 64 (J) 00000166 007CF1D4.mid TrackParseDebug.txt", u8"00000166 007CF1D4", 0 },
 { u8"Puyo Puyo Sun 64 (J) 00000167 007CF230.mid", u8"Puyo Puyo Sun 64 (J) 00000167 007CF230.mid TrackParseDebug.txt", u8"00000167 007CF230", 0 },
+*/

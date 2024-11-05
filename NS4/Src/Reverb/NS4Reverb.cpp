@@ -2524,7 +2524,7 @@ namespace ns4 {
 		// Doraemon 2: Nobita to Hikari no Shinden.
 		{
 			NS4_TAPS( m_rtDoraemonNobita0 ),
-			0.68472976205032099,													// dTapVol
+			NS4_SQRT_0_5/*0.68472976205032099*/,									// dTapVol
 			0,																		// i64TapOffset
 			NS4_NO_FADE,
 			NS4_NO_LPF,

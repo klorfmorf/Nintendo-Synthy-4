@@ -6,21 +6,31 @@
 #define NS4_REVERB_TRACKS					0
 #define NS4_ORIG_HZ							22047
 #define NS4_CURVE							40.0
-#define NS4_OUT_DIRECTORY					u8"F:\\N64OST\\Bust-A-Move '99\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Bust-A-Move '99\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_IGNORE_REVERB					true
 #define NS4_PERC_CHANNEL					9
 #define NS4_NO_PROGRAM_CHANGE_SORT			true
+#define NS4_ENV_MULTIPLIER					(1.0)
+#define NS4_REL_MULTIPLIER					(1.0)
+#define NS4_ENVELOPE_VOL_CURVE				20.0
+#define NS4_ENVELOPE_POINT_CURVE			40.0
+#define NS4_EXPONENTIAL_ENVELOPE			true
+
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 
 { u8"Bust-A-Move '99 (U) 00000000 00580F20.mid", u8"Bust-A-Move '99 (U) 00000000 00580F20.mid TrackParseDebug.txt", u8"Taito", 0,
 	2, {
-		{ NS4_PLAY_SAMPLE_SIMPLE( u8"J:\\My Projects\\MIDIWorks\\Exports\\Bust-A-Move '99\\Samples\\B01I00S25.wav", 1, 1, 1, 0, 0, 1.0, 64 ) },
+		{ NS4_PLAY_SAMPLE_SIMPLE( u8"C:\\My Projects\\MIDIWorks\\Exports\\Bust-A-Move '99\\Samples\\B01I00S25.wav", 1, 1, 1, 0, 0, 1.0, 64 ) },
 		{ ns4::CMidiFile::NS4_ES_PRE_UNROLL, ns4::CMidiFile::NS4_E_MUTE_ALL_TRACKS },
 	   } },
 
 { u8"Bust-A-Move '99 (U) 00000000 00580F20.mid", u8"Bust-A-Move '99 (U) 00000000 00580F20.mid TrackParseDebug.txt", u8"Intro", 0 },
-{ u8"Bust-A-Move '99 (U) 00000001 00581224.mid", u8"Bust-A-Move '99 (U) 00000001 00581224.mid TrackParseDebug.txt", u8"Select Game Mode", 0,
+{ u8"Bust-A-Move '99 (U) 00000001 00581224.mid", u8"Bust-A-Move '99 (U) 00000001 00581224.mid TrackParseDebug.txt", u8"Menu", 0,
 	1, {
 		{ ns4::CMidiFile::NS4_ES_PRE_UNROLL, ns4::CMidiFile::NS4_E_SET_LOOP_POINTS_ALL_TRACKS, 0, 0, 0, { 1, 1, 1, 0 }, { 13, 1, 1, 0 } },
 	   } },
@@ -34,7 +44,7 @@
 		{ ns4::CMidiFile::NS4_ES_PRE_UNROLL, ns4::CMidiFile::NS4_E_SET_LOOP_POINTS_ALL_TRACKS, 0, 0, 0, { 1, 1, 1, 0 }, { 20, 1, 1, 0 } },
 	   } },
 { u8"Bust-A-Move '99 (U) 00000005 00585AA4.mid", u8"Bust-A-Move '99 (U) 00000005 00585AA4.mid TrackParseDebug.txt", u8"00585AA4", 0 },
-{ u8"Bust-A-Move '99 (U) 00000006 00587764.mid", u8"Bust-A-Move '99 (U) 00000006 00587764.mid TrackParseDebug.txt", u8"00587764", 0 },
+{ u8"Bust-A-Move '99 (U) 00000006 00587764.mid", u8"Bust-A-Move '99 (U) 00000006 00587764.mid TrackParseDebug.txt", u8"Continue", 0 },
 { u8"Bust-A-Move '99 (U) 00000007 0058A494.mid", u8"Bust-A-Move '99 (U) 00000007 0058A494.mid TrackParseDebug.txt", u8"0058A494", 0 },
 { u8"Bust-A-Move '99 (U) 00000008 0058A5E0.mid", u8"Bust-A-Move '99 (U) 00000008 0058A5E0.mid TrackParseDebug.txt", u8"Special Stages", 0,
 	1, {

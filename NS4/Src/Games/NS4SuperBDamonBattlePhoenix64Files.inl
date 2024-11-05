@@ -7,7 +7,7 @@
 #define NS4_REVERB							ns4::CReverb::NS4_T_SUPER_B_DAMON_BATTLE_PHOENIX_64_0
 #define NS4_ORIG_HZ							32006
 #define NS4_CURVE							40.0
-#define NS4_OUT_DIRECTORY					u8"T:\\N64OST\\Super B-Daman - Battle Phoenix 64\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Super B-Daman Battle Phoenix 64\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 //#define NS4_WET_FILTER_FREQ					9502.0 / 2.0
 //#define NS4_WET_FILTER_ORDER				NS4_FILTER_DB_TO_ORDER( 24 )
@@ -19,7 +19,7 @@
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
 #define NS4_OVERSAMPLING					(1 << 2)
-#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
 

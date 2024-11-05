@@ -17,7 +17,10 @@
 #define NS4_EXPONENTIAL_ENVELOPE			true
 #define NS4_SND_BNK_FORCE_SAMPLE_RATE		32000
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"J.League Eleven Beat 1997 (J) 00000000 00632578.mid", u8"J.League Eleven Beat 1997 (J) 00000000 00632578.mid TrackParseDebug.txt", u8"Track 00", 0 },
 { u8"J.League Eleven Beat 1997 (J) 00000001 006336D8.mid", u8"J.League Eleven Beat 1997 (J) 00000001 006336D8.mid TrackParseDebug.txt", u8"Track 01", 0 },

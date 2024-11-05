@@ -45,9 +45,9 @@
 { u8"Star Soldier - Vanishing Earth (U) 00000010 001F8770.mid", u8"Star Soldier - Vanishing Earth (U) 00000010 001F8770.mid TrackParseDebug.txt", u8"GAME OVER", 0x10 },
 { u8"Star Soldier - Vanishing Earth (U) 00000011 001F8A98.mid", u8"Star Soldier - Vanishing Earth (U) 00000011 001F8A98.mid TrackParseDebug.txt", u8"NAME ENTRY", 0x11 },
 
-{ u8"Star Soldier - Vanishing Earth (U) 00000016 001FE658.mid", u8"Star Soldier - Vanishing Earth (U) 00000016 001FE658.mid TrackParseDebug.txt", u8"UNKNOWN 1", 0x0B },
-{ u8"Star Soldier - Vanishing Earth (U) 00000017 00200F50.mid", u8"Star Soldier - Vanishing Earth (U) 00000017 00200F50.mid TrackParseDebug.txt", u8"UNKNOWN 2", 0x05 },
-{ u8"Star Soldier - Vanishing Earth (U) 00000018 002039F0.mid", u8"Star Soldier - Vanishing Earth (U) 00000018 002039F0.mid TrackParseDebug.txt", u8"UNKNOWN 3", 0x09 },
+{ u8"Star Soldier - Vanishing Earth (U) 00000016 001FE658.mid", u8"Star Soldier - Vanishing Earth (U) 00000016 001FE658.mid TrackParseDebug.txt", u8"SECRET 1", 0x0B },
+{ u8"Star Soldier - Vanishing Earth (U) 00000017 00200F50.mid", u8"Star Soldier - Vanishing Earth (U) 00000017 00200F50.mid TrackParseDebug.txt", u8"SECRET 2", 0x05 },
+{ u8"Star Soldier - Vanishing Earth (U) 00000018 002039F0.mid", u8"Star Soldier - Vanishing Earth (U) 00000018 002039F0.mid TrackParseDebug.txt", u8"SECRET 3", 0x09 },
 
 { u8"Star Soldier - Vanishing Earth (U) 0000000F 001F8700.mid", u8"Star Soldier - Vanishing Earth (U) 0000000F 001F8700.mid TrackParseDebug.txt", u8"SOUND TEST", 0x0F },
 //{ u8"Star Soldier - Vanishing Earth (U) 00000013 001FA078.mid", u8"Star Soldier - Vanishing Earth (U) 00000013 001FA078.mid TrackParseDebug.txt", u8"SOUND TEST 2", 0x13 },
