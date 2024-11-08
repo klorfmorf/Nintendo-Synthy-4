@@ -8,16 +8,16 @@
 #define NS4_ORIG_HZ							22018
 #define NS4_Q_MIN							1.0
 #define NS4_CURVE							20.0
-#define NS4_OUT_DIRECTORY					u8"T:\\N64OST\\Conker’s Bad Fur Day\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Conker’s Bad Fur Day\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
-#define NS4_WET_FILTER_FREQ					4736.0//(NS4_ORIG_HZ / std::pow( 2.0, 3.35 ))
+#define NS4_WET_FILTER_FREQ					8832.0//(NS4_ORIG_HZ / std::pow( 2.0, 3.35 ))
 #define NS4_WET_FILTER_ORDER				NS4_FILTER_DB_TO_ORDER( 6 )
 #define NS4_VIB_SCALE						2.0
 //#define NS4_OVERSAMPLING_BW					3500.0
 #define NS4_ENV_MULTIPLIER					(1.0 / 3.0)
 
 #define NS4_OVERSAMPLING					(1 << 2)
-#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
 
@@ -194,8 +194,10 @@
 		{ ns4::CMidiFile::NS4_ES_PRE_UNROLL, ns4::CMidiFile::NS4_E_MOVE_UNTIL_END, 0, 0, 0, { 68, 1, 1, 0 }, { 66, 2, 1, 0 } },
 		{ ns4::CMidiFile::NS4_ES_PRE_UNROLL, ns4::CMidiFile::NS4_E_MOVE_UNTIL_END, 0, 0, 0, { 38, 4, 3, 0 }, { 37, 2, 1, 0 } },
 
-		{ NS4_PLAY_SAMPLE_SIMPLE_FLAGS( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/B00I00S5D8.wav", 10, 2, 4, 78, 57, 1.0, 64, 0 ) },
-		{ NS4_PLAY_SAMPLE_SIMPLE_FLAGS( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/B00I00S5D9.wav", 11, 4, 2, 32, 57, 1.0, 43, ns4::CMidiFile::NS4_NRF_INVERT_LEFT ) },
+		//{ NS4_PLAY_SAMPLE_SIMPLE_FLAGS( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/B00I00S5D8.wav", 10, 2, 4, 78, 57, 1.0, 64, 0 ) },
+		//{ NS4_PLAY_SAMPLE_SIMPLE_FLAGS( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/B00I00S5D9.wav", 11, 4, 2, 32, 57, 1.0, 43, ns4::CMidiFile::NS4_NRF_INVERT_LEFT ) },
+		{ NS4_PLAY_SAMPLE( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/B00I00S5D8.wav", 10, 2, 4, 78, 0x3C-6, 57, 1.0, 64, 0, 0x3C, 0, 0, 0x7F, 0x40, 1.0, 0, 0, 0, 0, 0, 0, 0, 0 ) },
+		{ NS4_PLAY_SAMPLE( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/B00I00S5D9.wav", 11, 4, 2, 32, 0x3C-6, 57, 1.0, 43, ns4::CMidiFile::NS4_NRF_INVERT_LEFT, 0x3C, 0, 0, 0x7F, 0x40, 1.0, 0, 0, 0, 0, 0, 0, 0, 0 ) },
 		{ NS4_PLAY_SAMPLE_SIMPLE_FLAGS( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/1CEAC00.wav", 13, 1, 4, 0, 0, 1.0, 64, 0 ) },	// I.  Am.  The Great Mighty Poo, and I'm going to throw my shit at you.  A huge supply of tish comes from my chocolate starfish.  How about some scat you little twat?
 		{ NS4_PLAY_SAMPLE_SIMPLE_FLAGS( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/1D01E90.wav", 39, 2, 2, 30, 0, 1.0, 64, 0 ) },	// Do you really think you'll survive in here?  You don't seem to know which creek you're in.
 		{ NS4_PLAY_SAMPLE_SIMPLE_FLAGS( u8"C:\\N64OST\\Conker’s Bad Fur Day ECTS\\Research/1D0D7F8.wav", 43, 2, 4, 90, 0, 1.0, 64, 0 ) },	// Sweet corn is the only thing that makes it through my rear.  How do you think I keep this lovely grin?

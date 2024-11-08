@@ -51,7 +51,7 @@
 //#define NS4_PRINT_BEST_BANK
 
 #ifdef NS4_BULK
-//#define NS4_ONE_OFF										(13-1)
+//#define NS4_ONE_OFF										(50-1)
 //#define NS4_EXPORT_SOME
 //#define NS4_EPORT_FROM								(29-1)
 #else
@@ -303,7 +303,7 @@ int oldmain() {
 	};
 	static const NS4_MIDI_FILE mfFiles[] = {
 #ifdef NS4_BULK
-//#include "Src/Games/NS4ConkersBadFurDayFiles.inl"
+#include "Src/Games/NS4ConkersBadFurDayFiles.inl"
 //#include "Src/Games/NS4ConkersBadFurDayECTSFiles.inl"
 //#include "Src/Games/NS4DinosaurPlanetFiles.inl"
 //#include "Src/Games/NS4JetForceGeminiFiles.inl"
@@ -428,7 +428,7 @@ int oldmain() {
 //#include "Src/Games/NS4HarvestMoonFiles.inl"
 //#include "Src/Games/NS4DrMario64Files.inl"
 //#include "Src/Games/NS4F1RacingChampionshipFiles.inl"
-#include "Src/Games/NS4FlyingDragonFiles.inl"
+//#include "Src/Games/NS4FlyingDragonFiles.inl"
 //#include "Src/Games/NS4Quest64Files.inl"
 //#include "Src/Games/NS4JLeagueSoccer64Files.inl"
 //#include "Src/Games/NS4JTacticsSoccer64Files.inl"
@@ -489,6 +489,7 @@ int oldmain() {
 //#include "Src/Games/NS4FireElectricPenFiles.inl"
 //#include "Src/Games/NS4RobotPonkotsu64Files.inl"
 //#include "Src/Games/NS4KirattoKaiketsu64TanteidanFiles.inl"
+//#include "Src/Games/NS4NintamaRantarou64GameGalleryFiles.inl"
 //#include "Src/Games/NS4NintamaRantarou64GameGalleryFiles.inl"
 //#include "Src/Games/NS4Famista64Files.inl"
 //#include "Src/Games/NS4PowerLeague64Files.inl"
