@@ -303,7 +303,7 @@ int oldmain() {
 	};
 	static const NS4_MIDI_FILE mfFiles[] = {
 #ifdef NS4_BULK
-#include "Src/Games/NS4ConkersBadFurDayFiles.inl"
+//#include "Src/Games/NS4ConkersBadFurDayFiles.inl"
 //#include "Src/Games/NS4ConkersBadFurDayECTSFiles.inl"
 //#include "Src/Games/NS4DinosaurPlanetFiles.inl"
 //#include "Src/Games/NS4JetForceGeminiFiles.inl"
@@ -329,7 +329,7 @@ int oldmain() {
 //#include "Src/Games/NS4BlastCorpsPALFiles.inl"
 //#include "Src/Games/NS4KillerInstinctGoldFiles.inl"
 //#include "Src/Games/NS4KillerInstinctGold2Files.inl"
-//#include "Src/Games/NS4DonkeyKong64Files.inl"
+#include "Src/Games/NS4DonkeyKong64Files.inl"
 //#include "Src/Games/NS4DonkeyKong64KioskFiles.inl"
 
 //#include "Src/Games/NS4Turok3ShadowOfOblivion.inl"
