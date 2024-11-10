@@ -13,6 +13,11 @@
 #define NS4_PERC_CHANNEL					9
 #define NS4_NO_PROGRAM_CHANGE_SORT			true
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
+
 
 //{ u8"Rayman 2 - The Great Escape (U) (M5) 00000000 0022DFEC.mid", u8"", u8"0022DFEC", 0 },
 { u8"Rayman 2 - The Great Escape (U) (M5) 00000001 0022E094.mid", u8"", u8"0022E094", 0 },

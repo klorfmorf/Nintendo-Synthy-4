@@ -329,7 +329,7 @@ int oldmain() {
 //#include "Src/Games/NS4BlastCorpsPALFiles.inl"
 //#include "Src/Games/NS4KillerInstinctGoldFiles.inl"
 //#include "Src/Games/NS4KillerInstinctGold2Files.inl"
-#include "Src/Games/NS4DonkeyKong64Files.inl"
+//#include "Src/Games/NS4DonkeyKong64Files.inl"
 //#include "Src/Games/NS4DonkeyKong64KioskFiles.inl"
 
 //#include "Src/Games/NS4Turok3ShadowOfOblivion.inl"
@@ -373,7 +373,7 @@ int oldmain() {
 //#include "Src/Games/NS4WarGodsFiles.inl"
 //#include "Src/Games/NS4WarGodsOstFiles.inl"
 //#include "Src/Games/NS4WCWvsnWoWorldTourFiles.inl"
-//#include "Src/Games/NS4WonderProjectJFiles.inl"
+#include "Src/Games/NS4WonderProjectJFiles.inl"
 //#include "Src/Games/NS4ZoorFiles.inl"
 
 //#include "Src/Games/NS4SuperMario64Files.inl"
