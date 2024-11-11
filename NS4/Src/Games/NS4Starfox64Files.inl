@@ -29,10 +29,10 @@
 #define NS4_LINEAR_VOL_POW					2.0
 //#define NS4_OVERSAMPLING_BW					500.0
 
-#define NS4_OVERSAMPLING					(1 << 2)
-#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
-#define NS4_ANTI_ALIASING_LEVEL				2
-#define NS4_ANTI_ALIASING_HZ				20000.0
+//#define NS4_OVERSAMPLING					(1 << 2)
+//#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
+//#define NS4_ANTI_ALIASING_LEVEL				2
+//#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Star Fox 64 (U) (V1.1) 00000023 000C4260.mid", u8"Star Fox 64 (U) (V1.1) 00000023 000C4260.mid TrackParseDebug.txt", u8"Opening", 0x15,
 	2,

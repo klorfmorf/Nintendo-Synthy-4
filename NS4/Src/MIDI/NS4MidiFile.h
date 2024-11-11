@@ -530,6 +530,9 @@ namespace ns4 {
 			/**< If true, Manual sample renders don't extend the allocated track length. */
 			bool						bManualSamplesStopAtTrackEnd = false;
 
+			/**< Tris to auto-calculate track offsets for extended channel information during load. */
+			bool						bAutoTrackOffsetDuringLoad = false;
+
 			/** If not 0, specifies the control to be interpreted as LPF.  Is usually set to 34. */
 			uint8_t						ui8LpfControl = 0;
 

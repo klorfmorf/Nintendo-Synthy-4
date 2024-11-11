@@ -368,7 +368,9 @@ namespace ns4 {
 								m_vTracks.push_back( NS4_TRACK() );
 								m_vTracks[m_vTracks.size()-1].thHeader = thHeader;
 							}
-							teEvent.i32ChanOffset = iTrack / 16 * 16;
+							if ( m_sSettings.bAutoTrackOffsetDuringLoad ) {
+								teEvent.i32ChanOffset = iTrack / 16 * 16;
+							}
 							m_vTracks[iTrack].vEvents.push_back( teEvent );
 							m_vTracks[iTrack].thHeader.ui32Length = static_cast<uint32_t>(m_vTracks[iTrack].vEvents.size());
 						}
@@ -383,7 +385,9 @@ namespace ns4 {
 							/*if ( iTrack != -1 && i8Chan == -1 ) {
 								i8Chan = iTrack;
 							}*/
-							teEvent.i32ChanOffset = int32_t( (m_vTracks.size() - 1) / 16 * 16 );
+							if ( m_sSettings.bAutoTrackOffsetDuringLoad ) {
+								teEvent.i32ChanOffset = int32_t( (m_vTracks.size() - 1) / 16 * 16 );
+							}
 							tTrack.vEvents.push_back( teEvent );
 						}
 					}
@@ -553,6 +557,10 @@ namespace ns4 {
 								::OutputDebugStringA( sLine.c_str() );
 								::OutputDebugStringA( " Chan Pan\r\n" );
 							}*/
+							if ( ui32Track == 15 ) {
+								::OutputDebugStringA( sLine.c_str() );
+								::OutputDebugStringA( " Chan Pan\r\n" );
+							}
 
 							InsertEvent( m_vTracks[ui32Track].vEvents, NS4_C_PAN, uint8_t( ui32Tmp2 ), uint8_t( ui32Channel ), ui32Tmp1, nullptr );
 						}
