@@ -15,7 +15,7 @@
 #define NS4_REMAP_ATK_0_TO_7F				true
 //#define NS4_MASTER_REVERB_VOLUME			(4.0)
 #define NS4_ENV_MULTIPLIER					(1.0 / 3.0)
-
+#define NS4_AUTO_OFFSET_TRACK_CHAN			true
 
 //#ifndef _DEBUG
 //#define NS4_OUTPUT_HZ						44100

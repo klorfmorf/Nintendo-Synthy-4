@@ -557,10 +557,6 @@ namespace ns4 {
 								::OutputDebugStringA( sLine.c_str() );
 								::OutputDebugStringA( " Chan Pan\r\n" );
 							}*/
-							if ( ui32Track == 15 ) {
-								::OutputDebugStringA( sLine.c_str() );
-								::OutputDebugStringA( " Chan Pan\r\n" );
-							}
 
 							InsertEvent( m_vTracks[ui32Track].vEvents, NS4_C_PAN, uint8_t( ui32Tmp2 ), uint8_t( ui32Channel ), ui32Tmp1, nullptr );
 						}
