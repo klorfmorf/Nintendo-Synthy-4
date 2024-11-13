@@ -246,7 +246,7 @@ int oldmain() {
 
 #if 0
 	// Tools somehow stopped being able to load .n64 files due to not automatically byte-swapping them.
-#define LSN_SWAP_ME			L"Onegai Monsters (Japan)"
+#define LSN_SWAP_ME			L"Mahjong Hourouki Classic (Japan)"
 #define LSN_SWAP_ME_DIR		L"C:\\My Projects\\N64\\Roms\\"
 	{
 		const wchar_t * pu16ByteswapMe = LSN_SWAP_ME_DIR LSN_SWAP_ME L".n64";
@@ -388,7 +388,7 @@ int oldmain() {
 //#include "Src/Games/NS4TheLegendOfZeldaMajorasMaskFiles.inl"
 //#include "Src/Games/NS4YoshisStoryFiles.inl"
 //#include "Src/Games/NS4MarioKart64Files.inl"
-#include "Src/Games/NS4MarioKart64HeadphonesFiles.inl"
+//#include "Src/Games/NS4MarioKart64HeadphonesFiles.inl"
 //#include "Src/Games/NS41080SnowboardingFiles.inl"
 //#include "Src/Games/NS4WaveRace64Files.inl"
 //#include "Src/Games/NS4PokemonStadium2Files.inl"
@@ -447,6 +447,9 @@ int oldmain() {
 //#include "Src/Games/NS4F1PolePositionFiles.inl"
 //#include "Src/Games/NS4ChoroQIIFiles.inl"
 //#include "Src/Games/NS4EikouNoStAndrewsFiles.inl"
+#include "Src/Games/NS4Pachinko365NichiFiles.inl"
+//#include "Src/Games/NS4MoritaShogi64Files.inl"
+//#include "Src/Games/NS4MahjongHorokiClassicFiles.inl"
 
 //#include "Src/Games/NS4NeonGenesisEvangelionFiles.inl"
 

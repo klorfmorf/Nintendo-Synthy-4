@@ -317,6 +317,7 @@
     <None Include="Src\Games\NS4Kirby64TheCrystalShardsFiles.inl" />
     <None Include="Src\Games\NS4LastLegionUxFiles.inl" />
     <None Include="Src\Games\NS4MaceTheDarkAgesFiles.inl" />
+    <None Include="Src\Games\NS4MahjongHorokiClassicFiles.inl" />
     <None Include="Src\Games\NS4MajorLeagueBaseballFeaturingKenGriffeyJrFiles.inl" />
     <None Include="Src\Games\NS4MarioKart64Files.inl" />
     <None Include="Src\Games\NS4MarioKart64HeadphonesFiles.inl" />
@@ -331,11 +332,13 @@
     <None Include="Src\Games\NS4MissionImpossibleFiles.inl" />
     <None Include="Src\Games\NS4MonacoGrandPrixFiles.inl" />
     <None Include="Src\Games\NS4MonopolyFiles.inl" />
+    <None Include="Src\Games\NS4MoritaShogi64Files.inl" />
     <None Include="Src\Games\NS4MortalKombatTrilogyFiles.inl" />
     <None Include="Src\Games\NS4MRCMultiRacingChampionshipFiles.inl" />
     <None Include="Src\Games\NS4NeonGenesisEvangelionFiles.inl" />
     <None Include="Src\Games\NS4NintamaRantarou64GameGalleryFiles.inl" />
     <None Include="Src\Games\NS4OnegaiMonstersFiles.inl" />
+    <None Include="Src\Games\NS4Pachinko365NichiFiles.inl" />
     <None Include="Src\Games\NS4PennyRacersFiles.inl" />
     <None Include="Src\Games\NS4PennyRacersOverSamplingFiles.inl" />
     <None Include="Src\Games\NS4PerfectDarkFiles.inl" />

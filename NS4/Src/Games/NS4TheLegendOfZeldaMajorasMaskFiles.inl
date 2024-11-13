@@ -9,7 +9,7 @@
 #define NS4_ORIG_HZ							32006
 #define NS4_CURVE							40.0
 //#define NS4_MASTER_CURVE					40.0
-#define NS4_OUT_DIRECTORY					u8"T:\\N64OST\\The Legend of Zelda Majora's Mask\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\The Legend of Zelda Majora's Mask\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_WET_FILTER_FREQ					0.0
 #define NS4_ENV_MULTIPLIER					(1.0)
@@ -37,6 +37,11 @@
 #define NS4_REVERB_OPTIONS					ns4::CMidiFile::NS4_OVER_127_SWAP_L_AND_R
 //#define NS4_CHANNEL_IDX_DETERMINES_PROGRAM	true
 //#define NS4_CHANNEL_DETERMINES_PROGRAM		true
+
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 
 { u8"Legend of Zelda, The - Majora's Mask (U) 00000076 00A684D0 Intro movie.mid", u8"Legend of Zelda, The - Majora's Mask (U) 00000076 00A684D0 Intro movie.mid TrackParseDebug.txt", u8"Title Demo", 0x23,

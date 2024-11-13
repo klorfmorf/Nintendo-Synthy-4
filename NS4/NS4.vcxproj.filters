@@ -1099,5 +1099,14 @@
     <None Include="Src\Reverb\Taps\NS4ReverbPuyoPuyoSun640.inl">
       <Filter>Header Files\Reverb\Taps</Filter>
     </None>
+    <None Include="Src\Games\NS4MoritaShogi64Files.inl">
+      <Filter>Header Files\Games</Filter>
+    </None>
+    <None Include="Src\Games\NS4Pachinko365NichiFiles.inl">
+      <Filter>Header Files\Games</Filter>
+    </None>
+    <None Include="Src\Games\NS4MahjongHorokiClassicFiles.inl">
+      <Filter>Header Files\Games</Filter>
+    </None>
   </ItemGroup>
 </Project>
