@@ -709,6 +709,7 @@ namespace ns4 {
 							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, NS4_TRK_SET_PITCH_SCALE, uint8_t( ui32Tmp3 ), i32Chan, ui32Tmp1, nullptr );
 							/*NS4_TRACK_EVENT teEvent = CreatePitchBend( (int32_t( ui32Tmp3 ) * 128) / 8191.0, ui32Tmp1, uint8_t( i32Chan ) );
 							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, teEvent, nullptr );*/
+							::OutputDebugStringA( (sLine + "\r\n").c_str() );
 						}
 					}
 

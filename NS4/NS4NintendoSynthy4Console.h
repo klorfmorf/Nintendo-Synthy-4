@@ -447,11 +447,11 @@ int oldmain() {
 //#include "Src/Games/NS4F1PolePositionFiles.inl"
 //#include "Src/Games/NS4ChoroQIIFiles.inl"
 //#include "Src/Games/NS4EikouNoStAndrewsFiles.inl"
-#include "Src/Games/NS4Pachinko365NichiFiles.inl"
+//#include "Src/Games/NS4Pachinko365NichiFiles.inl"
 //#include "Src/Games/NS4MoritaShogi64Files.inl"
 //#include "Src/Games/NS4MahjongHorokiClassicFiles.inl"
 
-//#include "Src/Games/NS4NeonGenesisEvangelionFiles.inl"
+#include "Src/Games/NS4NeonGenesisEvangelionFiles.inl"
 
 //#include "Src/Games/NS4SimCity2000Files.inl"
 //#include "Src/Games/NS4SuperBDamonBattlePhoenix64Files.inl"

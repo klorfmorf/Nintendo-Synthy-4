@@ -1,4 +1,4 @@
-﻿#define NS4_GAME							u8"Mahjong Hōrōki (麻雀放浪記CLASSIC)"
+﻿#define NS4_GAME							u8"Mahjong Hōrōki Classic (麻雀放浪記CLASSIC)"
 //#define NS4_COMPOSERS						u8"Masamichi Amano"
 #define NS4_YEAR							u8"1997"
 #define NS4_FOLDER							u8"Mahjong Hourouki Classic"
@@ -9,8 +9,9 @@
 #define NS4_CURVE							40.0
 #define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Mahjong Hourouki Classic\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
-//#define NS4_IGNORE_REVERB					true
-//#define NS4_OVERSAMPLING_BW					2500.0
+#define NS4_PERC_CHANNEL					9
+#define NS4_SND_BNK_FORCE_PERC_SAMPLE_RATE	(22050 * 2)
+//#define NS4_NO_PROGRAM_CHANGE_SORT			true
 #define NS4_ENV_MULTIPLIER					(1.0)
 #define NS4_REL_MULTIPLIER					(1.0)
 #define NS4_ENVELOPE_VOL_CURVE				20.0
