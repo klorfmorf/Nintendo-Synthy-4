@@ -809,6 +809,22 @@ namespace ns4 {
 							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, teEvent, nullptr );
 						}
 					}
+
+
+					// 00002E64 Time: 0000077F Command: 81  Instrument Instrument 0D (13) (Looked up 27)
+					// 00002E6C Time: 000007E3 Command: 81  Instrument Instrument 4C (76) (TOO BIG Looked up)
+					auto aCnt = std::sscanf( sLine.c_str(), "%X Time: %X Command: %X  Instrument Instrument %X (%u) (Looked up %X)", &ui32Tmp0, &ui32Tmp1, &ui32Tmp2, &ui32Tmp3, &ui32Tmp4, &ui32Tmp5 );
+					if ( aCnt == 5 ) {
+						// This means the TOO BIG version was hit.
+						::OutputDebugStringA( (sLine + "\r\n").c_str() );
+					}
+					else if ( aCnt == 6 ) {
+						if ( i32OffsetTrack >= 0 && i32OffsetTrack < m_vTracks.size() ) {
+							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, NS4_C_BANK_SELECT, 0, i32Chan, ui32Tmp1, nullptr );
+							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, NS4_C_LSB, ui32Tmp5 >> 8, i32Chan, ui32Tmp1, nullptr );
+							InsertEvent( m_vTracks[i32OffsetTrack].vEvents, CreateProgramChange( uint8_t( ui32Tmp5 ), uint32_t( ui32Tmp1 ), uint8_t( i32Chan ) ), nullptr );
+						}
+					}
 				}
 				return true;
 			}
@@ -932,7 +948,7 @@ namespace ns4 {
 	 * \param _pdStartTime If not nullptr, the start time of playback.
 	 * \return Returns the rendered audio.
 	 */
-	lwaudio & CMidiFile::RenderNotesToStereo( lwaudio &_aResult, size_t _stTrack, const NS4_TRACK_RENDER_OPTIONS &_troOptions, const CSoundBank &_sbSoundBank,
+	lwaudio & CMidiFile::RenderNotesToStereo( lwaudio &_aResult, size_t _stTrack, const NS4_TRACK_RENDER_OPTIONS &_troOptions, CSoundBank &_sbSoundBank,
 		lwaudio * _paWet,
 		uint64_t * _pui64TimeOfLastSound,
 		double * _pdStartTime ) const {
@@ -1750,8 +1766,9 @@ namespace ns4 {
 	 * \param _pmMods The array of modifications.
 	 * \param _esStage The modification stage (NS4_ES_PRE_UNROLL or NS4_ES_POST_SUPPLEMENTAL).
 	 * \param _pcMidiFolder The MIDI folder where additional MIDI files might be loaded.
+	 * \param _sbSoundBank The current sound bank.
 	 */
-	void CMidiFile::ApplyPreUnrollMods( uint32_t _ui32Total, const NS4_MODIFIER * _pmMods, NS4_EVENT_STAGE _esStage, const char * _pcMidiFolder ) {
+	void CMidiFile::ApplyPreUnrollMods( uint32_t _ui32Total, const NS4_MODIFIER * _pmMods, NS4_EVENT_STAGE _esStage, const char * _pcMidiFolder, CSoundBank &_sbSoundBank ) {
 		if ( _esStage == NS4_ES_PRE_UNROLL ) {
 			m_sSettings.bIgnoreLoops = false;
 			m_sSettings.i32TempoOverride = 0;
@@ -2189,6 +2206,13 @@ namespace ns4 {
 						}
 						break;
 					}
+					case NS4_E_REMOVE_LOOP_POINTS_BY_TRACK_INDEX : {
+						iTrackByChan = _pmMods[I].ui32Channel;
+						if ( iTrackByChan >= 0 && iTrackByChan < m_vTracks.size() ) {
+							RemoveLoops( m_vTracks[iTrackByChan].vEvents );
+						}
+						break;
+					}
 					case NS4_E_REMOVE_ALL_LOOP_POINTS : {
 						for ( auto J = m_vTracks.size(); J--; ) {
 							RemoveLoops( m_vTracks[J].vEvents );
@@ -2458,6 +2482,11 @@ namespace ns4 {
 								}
 							}
 						}
+						break;
+					}
+					case NS4_E_SET_BANK_PUNK7890 : {
+						std::string sFinal = std::string( _pcMidiFolder ) + _pmMods[I].pcStringOp;
+						_sbSoundBank.LoadPunk7890Bank( sFinal.c_str() );
 						break;
 					}
 					case NS4_E_START_AT_TICK : {

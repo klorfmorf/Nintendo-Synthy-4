@@ -44,14 +44,14 @@
 
 #define NS4_BULK
 
-//#define NS4_SINGLE_TRACK								16
+//#define NS4_SINGLE_TRACK								4
 //#define NS4_NO_NORMALIZE
 // 
 //#define NS4_NO_OUTPUT									// Used to quickly print information in the MIDI files without actually generating WAV content.
 //#define NS4_PRINT_BEST_BANK
 
 #ifdef NS4_BULK
-//#define NS4_ONE_OFF										(2-1)
+//#define NS4_ONE_OFF										(11-1)
 //#define NS4_EXPORT_SOME
 //#define NS4_EPORT_FROM								(29-1)
 #else
@@ -172,7 +172,8 @@ int oldmain() {
 		//	u8"C:\\My Projects\\Nintendo-Synthy-4\\NS4\\Src\\Reverb\\Research\\Psnap Thick.wav", 1.0 );
 		/*ns4::CReverb::HarvestUnfilteredMonoTaps( u8"C:\\My Projects\\Nintendo-Synthy-4\\NS4\\Src\\Reverb\\Research\\T3SoO Thin.wav", 160, 1, 0, 1, 0,
 			u8"C:\\My Projects\\Nintendo-Synthy-4\\NS4\\Src\\Reverb\\Research\\T3SoO Thick.wav", 1.0, 2.0 );*/
-		ns4::CReverb::HarvestUnfilteredMonoTaps( u8"C:\\My Projects\\Nintendo-Synthy-4\\NS4\\Src\\Reverb\\Research\\CBFD ESTC HD.wav", 0, 1, 0, 0, 0 );
+		//ns4::CReverb::HarvestUnfilteredMonoTaps( u8"C:\\My Projects\\Nintendo-Synthy-4\\NS4\\Src\\Reverb\\Research\\CBFD ESTC HD.wav", 0, 1, 0, 0, 0 );
+		ns4::CReverb::HarvestUnfilteredMonoTaps( u8"C:\\My Projects\\Nintendo-Synthy-4\\NS4\\Src\\Reverb\\Research\\PUYO HD.wav", 0, 1, 0, 0, 0 );
 	}
 	{
 		ns4::CWavLib::DetermineLevelsStereo( u8"C:\\My Projects\\Nintendo-Synthy-4\\NS4\\Src\\Reverb\\Research\\BM64 V 127 R 0 P 64.wav",
@@ -216,11 +217,11 @@ int oldmain() {
 
 #if 0
 	{
-		const uint32_t ui32SampRate = 22018;
+		const uint32_t ui32SampRate = 22047;
 		
 		ns4::lwaudio aWet = ns4::CWavLib::AllocateSamples( 1, ui32SampRate * 30 );
 		aWet[0][0] = 1.0;
-		ns4::lwaudio aAccum = ns4::CReverb::CreateReverb( ns4::CReverb::NS4_T_CONKERS_BAD_FUR_DAY_ECTS_DELAY_0, aWet, ui32SampRate, ui32SampRate, 0.0, 0 );
+		ns4::lwaudio aAccum = ns4::CReverb::CreateReverb( ns4::CReverb::NS4_T_PUYO_PUYO_SUN_64_DELAY_0, aWet, ui32SampRate, ui32SampRate, 0.0, 0 );
 		ns4::lwsample sFirst = aWet[0][0];
 		if ( sFirst == 0.0 ) {
 			::OutputDebugStringA( "Measles.\r\n" );
@@ -246,7 +247,7 @@ int oldmain() {
 
 #if 0
 	// Tools somehow stopped being able to load .n64 files due to not automatically byte-swapping them.
-#define LSN_SWAP_ME			L"Mahjong Hourouki Classic (Japan)"
+#define LSN_SWAP_ME			L"Monaco Grand Prix (USA)"
 #define LSN_SWAP_ME_DIR		L"C:\\My Projects\\N64\\Roms\\"
 	{
 		const wchar_t * pu16ByteswapMe = LSN_SWAP_ME_DIR LSN_SWAP_ME L".n64";
@@ -339,7 +340,7 @@ int oldmain() {
 //#include "Src/Games/NS4ReVoltFiles.inl"
 
 //#include "Src/Games/NS4Pilotwings64Files.inl"
-//#include "Src/Games/NS4PuyoPuyoSun64Files.inl"
+#include "Src/Games/NS4PuyoPuyoSun64Files.inl"
 //#include "Src/Games/NS4ExtremeGFiles.inl"
 //#include "Src/Games/NS4ExtremeGXG2Files.inl"
 //#include "Src/Games/NS4ChopperAttackFiles.inl"
@@ -451,7 +452,7 @@ int oldmain() {
 //#include "Src/Games/NS4MoritaShogi64Files.inl"
 //#include "Src/Games/NS4MahjongHorokiClassicFiles.inl"
 
-#include "Src/Games/NS4NeonGenesisEvangelionFiles.inl"
+//#include "Src/Games/NS4NeonGenesisEvangelionFiles.inl"
 
 //#include "Src/Games/NS4SimCity2000Files.inl"
 //#include "Src/Games/NS4SuperBDamonBattlePhoenix64Files.inl"
@@ -830,13 +831,18 @@ int oldmain() {
 		}
 #endif	// NS4_PRINT_BEST_BANK
 
+#ifdef NS4_BANK
+		ns4::CMidiFile::m_sSettings.ui32Bank = std::strtoul( reinterpret_cast<const char *>(NS4_BANK), nullptr, 16 );
+#else
+		ns4::CMidiFile::m_sSettings.ui32Bank = mfFiles[F].ui32Bank;
+#endif	// NS4_BANK
 
-		mfMidi.ApplyPreUnrollMods( mfFiles[F].ui32Modifiers, mfFiles[F].mModifiers, ns4::CMidiFile::NS4_ES_PRE_UNROLL, pcMidiFolder );
+		mfMidi.ApplyPreUnrollMods( mfFiles[F].ui32Modifiers, mfFiles[F].mModifiers, ns4::CMidiFile::NS4_ES_PRE_UNROLL, pcMidiFolder, vBanks[ns4::CMidiFile::m_sSettings.ui32Bank] );
 		ns4::CMidiFile::m_sSettings.bIgnoreLoops = ns4::CMidiFile::FindGlobalMod( ns4::CMidiFile::NS4_E_GLOBAL_IGNORE_LOOPS, troOptions.ui32TotalMods, troOptions.pmMods ) != nullptr;
 		if ( mfFiles[F].pcDbgFile && mfFiles[F].pcDbgFile[0] ) {
 			bool bMidiDbg = mfMidi.AddDebug_Standard( (std::string( reinterpret_cast<const char *>(NS4_ROOT_FOLDER NS4_FOLDER "\\DBG\\") ) + reinterpret_cast<const char *>(mfFiles[F].pcDbgFile)).c_str() );
 		}
-		mfMidi.ApplyPreUnrollMods( mfFiles[F].ui32Modifiers, mfFiles[F].mModifiers, ns4::CMidiFile::NS4_ES_POST_SUPPLEMENTAL, pcMidiFolder );
+		mfMidi.ApplyPreUnrollMods( mfFiles[F].ui32Modifiers, mfFiles[F].mModifiers, ns4::CMidiFile::NS4_ES_POST_SUPPLEMENTAL, pcMidiFolder, vBanks[ns4::CMidiFile::m_sSettings.ui32Bank] );
 		std::printf( "Loaded: %s\r\n", sFile.c_str() );
 		
 
@@ -1004,11 +1010,7 @@ int oldmain() {
 		
 
 
-#ifdef NS4_BANK
-		ns4::CMidiFile::m_sSettings.ui32Bank = std::strtoul( reinterpret_cast<const char *>(NS4_BANK), nullptr, 16 );
-#else
-		ns4::CMidiFile::m_sSettings.ui32Bank = mfFiles[F].ui32Bank;
-#endif	// NS4_BANK
+
 		
 		ns4::CFade fFade;
 		fFade.LoadTable( pcFadeFile );

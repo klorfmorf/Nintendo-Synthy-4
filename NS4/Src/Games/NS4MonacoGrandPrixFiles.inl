@@ -12,7 +12,8 @@
 #define NS4_NO_PROGRAM_CHANGE_SORT			true
 #define NS4_ENV_MULTIPLIER					(1.0)
 //#define NS4_MAX_RATE						44100
-//#define NS4_OVERSAMPLING_BW					500.0
+#define NS4_SND_BNK_FORCE_SAMPLE_RATE		22050
+#define NS4_SND_BNK_FORCE_PERC_SAMPLE_RATE	22050
 //#define NS4_PROG_CHANGE_SETS_VOL_PAN		false
 //#define NS4_ROOT_OFFSET						12
 //#define NS4_PERC_CHANNEL					9
@@ -20,11 +21,13 @@
 //#define NS4_ENV_MULTIPLIER					(2.0)
 
 #define NS4_OVERSAMPLING					(1 << 2)
-#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
 
 //{ u8"Monaco Grand Prix (U) 00000000 00151E48.mid", u8"", u8"00000000 00151E48", 0 },
+
+
 { u8"Monaco Grand Prix (U) 00000001 00208F90.mid", u8"", u8"Track 1", 0,
 	1, {
 		{ ns4::CMidiFile::NS4_ES_POST_SUPPLEMENTAL, ns4::CMidiFile::NS4_E_AUTO_LOOP, 0, 1, 0, { 1, 1, 1, 30 } },
@@ -41,22 +44,22 @@
 		{ ns4::CMidiFile::NS4_ES_POST_SUPPLEMENTAL, ns4::CMidiFile::NS4_E_AUTO_LOOP, 0, 1, 0, { 1, 1, 1, 30 } },
 	},
 },
-{ u8"Monaco Grand Prix (U) 00000004 00211668.mid", u8"", u8"Track 4", 0,
+{ u8"Monaco Grand Prix (U) 00000004 00211668.mid", u8"", u8"Track 4", 0,											// Main Menu.
 	1, {
 		{ ns4::CMidiFile::NS4_ES_POST_SUPPLEMENTAL, ns4::CMidiFile::NS4_E_AUTO_LOOP, 0, 1, 0, { 1, 1, 1, 30 } },
 	},
 },
-{ u8"Monaco Grand Prix (U) 00000005 00213D94.mid", u8"", u8"Track 5", 0,
+{ u8"Monaco Grand Prix (U) 00000005 00213D94.mid", u8"", u8"Track 5", 0,											// Results.
 	1, {
 		{ ns4::CMidiFile::NS4_ES_POST_SUPPLEMENTAL, ns4::CMidiFile::NS4_E_AUTO_LOOP, 0, 1, 0, { 1, 1, 1, 30 } },
 	},
 },
 
 
-{ u8"Monaco Grand Prix (U) 00000006 00215A3C.mid", u8"", u8"00000006 00215A3C", 0 },
-{ u8"Monaco Grand Prix (U) 00000007 0021612C.mid", u8"", u8"00000007 0021612C", 0 },
-{ u8"Monaco Grand Prix (U) 00000008 0021E8DC.mid", u8"", u8"00000008 0021E8DC", 0 },
-{ u8"Monaco Grand Prix (U) 00000009 00243894.mid", u8"", u8"00000009 00243894", 0 },
-{ u8"Monaco Grand Prix (U) 0000000A 0026698C.mid", u8"", u8"0000000A 0026698C", 0 },
-{ u8"Monaco Grand Prix (U) 0000000B 0028F0A4.mid", u8"", u8"0000000B 0028F0A4", 0 },
-{ u8"Monaco Grand Prix (U) 0000000C 002B7D7C.mid", u8"", u8"0000000C 002B7D7C", 0 },
+//{ u8"Monaco Grand Prix (U) 00000006 00215A3C.mid", u8"", u8"00000006 00215A3C", 0 },
+//{ u8"Monaco Grand Prix (U) 00000007 0021612C.mid", u8"", u8"00000007 0021612C", 0 },
+//{ u8"Monaco Grand Prix (U) 00000008 0021E8DC.mid", u8"", u8"00000008 0021E8DC", 0 },
+//{ u8"Monaco Grand Prix (U) 00000009 00243894.mid", u8"", u8"00000009 00243894", 0 },
+//{ u8"Monaco Grand Prix (U) 0000000A 0026698C.mid", u8"", u8"0000000A 0026698C", 0 },
+//{ u8"Monaco Grand Prix (U) 0000000B 0028F0A4.mid", u8"", u8"0000000B 0028F0A4", 0 },
+//{ u8"Monaco Grand Prix (U) 0000000C 002B7D7C.mid", u8"", u8"0000000C 002B7D7C", 0 },

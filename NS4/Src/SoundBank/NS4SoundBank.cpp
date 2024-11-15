@@ -291,6 +291,180 @@ namespace ns4 {
 	}
 
 	/**
+	 * Loads a punk7890 bank file.
+	 * 
+	 * \param _pcPath Path to the file to load.
+	 * \return Returns true if the file was loaded and parsed.
+	 **/
+	bool CSoundBank::LoadPunk7890Bank( const char * _pcPath ) {
+		CByteStream bsStream;
+		if ( !bsStream.LoadFile( _pcPath ) ) { return false; }
+
+		bool bHeader = true, bPerc = false;
+		NS4_SAMPLE * psSample = nullptr;
+		uint32_t ui32Bank, ui32Inst, ui32Sample, ui32InstVol, ui32InstPan;
+		while ( !bsStream.Ended() ) {
+			auto sLine = bsStream.GetLine();
+
+			// BANK_00_PERC_INSTRUMENT_00_HEADER
+			uint32_t ui32Parm0, ui32Parm1, ui32Parm2;
+
+			if ( std::sscanf( sLine.c_str(), "BANK_%X_PERC_INSTRUMENT_%X_HEADER", &ui32Parm0, &ui32Parm1 ) == 2 ) {
+				bHeader = true;
+				bPerc = true;
+				ui32Bank = ui32Parm0;
+				ui32Inst = ui32Parm1;
+			}
+			else if ( std::sscanf( sLine.c_str(), "BANK_%X_PERC_%X", &ui32Parm0, &ui32Parm1 ) == 2 ) {
+				bHeader = false;
+				bPerc = true;
+				ui32Bank = ui32Parm0;
+				ui32Inst = ui32Parm1;
+				psSample = FindPerc( ui32Inst );
+				if ( psSample ) {
+					psSample->ui32InstVol = ui32InstVol;
+					psSample->ui32InstPan = ui32InstPan;
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "BANK_%X_INSTR_%X_SND_%X", &ui32Parm0, &ui32Parm1, &ui32Parm2 ) == 3 ) {
+				bHeader = false;
+				bPerc = false;
+				ui32Bank = ui32Parm0;
+				ui32Inst = ui32Parm1;
+				ui32Sample = ui32Parm2;
+				psSample = FindInstSample( ui32Bank, ui32Inst, ui32Sample );
+				if ( psSample ) {
+					psSample->ui32InstVol = ui32InstVol;
+					psSample->ui32InstPan = ui32InstPan;
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "BANK_%X_INSTR_%X_HEADER", &ui32Parm0, &ui32Parm1 ) == 2 ) {
+				bHeader = true;
+				bPerc = false;
+				ui32Bank = ui32Parm0;
+				ui32Inst = ui32Parm1;
+			}
+
+
+
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Volume: %X", &ui32Parm0 ) == 1 ) {
+				ui32InstVol = ui32Parm0;
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Pan: %X", &ui32Parm0 ) == 1 ) {
+				ui32InstPan = ui32Parm0;
+			}
+
+
+			else if ( std::sscanf( sLine.c_str(), "->Sample Pan: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8Pan = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Sample Pan)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Sample Volume: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8Vol = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Sample Volume)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Attack Time: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->dAttack = ui32Parm0 / 1000000.0;
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Attack Time)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Decay Time: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->dDecay = ui32Parm0 / 1000000.0;
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Decay Time)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Release Time: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->dRelease = ui32Parm0 / 1000000.0;
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Release Time)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+
+			else if ( std::sscanf( sLine.c_str(), "->Attack Volume: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8AttackLevel = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Attack Volume)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Decay Volume: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8DecayLevel = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Decay Volume)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Velocity Min: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8LowVel = max( uint8_t( ui32Parm0 ), 1 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Velocity Min)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Velocity Max: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8HiVel = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Velocity Max)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Key Min: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8LowKey = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Key Min)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Key Max: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8HiKey = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Key Max)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Key Base: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8RootKey = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Key Base)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Detune: %X", &ui32Parm0 ) == 1 ) {
+				if ( psSample ) {
+					psSample->ui8FineTune = uint8_t( ui32Parm0 );
+				}
+				else {
+					std::printf( "SOUNDBANK: punk7890 sample not found (Detune)!!: %.2X %.4X %.4X\r\n", ui32Bank, ui32Inst, ui32Sample );
+				}
+			}
+		}
+		return true;
+	}
+
+	/**
 	 * Resets the object back to scratch.
 	 */
 	void CSoundBank::Reset() {

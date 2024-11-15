@@ -158,6 +158,14 @@ namespace ns4 {
 		bool							LoadSamples( const char * _pcPath, size_t _stReplacements = 0, const NS4_SAMPLE_REPLACEMENT * _srReplacements = nullptr );
 
 		/**
+		 * Loads a punk7890 bank file.
+		 * 
+		 * \param _pcPath Path to the file to load.
+		 * \return Returns true if the file was loaded and parsed.
+		 **/
+		bool							LoadPunk7890Bank( const char * _pcPath );
+
+		/**
 		 * Resets the object back to scratch.
 		 */
 		void							Reset();
@@ -340,7 +348,37 @@ namespace ns4 {
 		 */
 		std::string						ReRead( CByteStream &_fStream ) { return _fStream.ReRead(); }
 
-		
+		/**
+		 * Finds a percussion sample given its instrument.
+		 * 
+		 * \param _ui32Sample The sample index.
+		 * \return Returns the given percussion sample or nullptr if it is not found.
+		 **/
+		NS4_SAMPLE *					FindPerc( uint32_t _ui32Sample ) {
+			for ( auto I = m_vSamples.size(); I--; ) {
+				if ( m_vSamples[I].ui32Bank == 127 && m_vSamples[I].ui32Inst == _ui32Sample ) {
+					return &m_vSamples[I];
+				}
+			}
+			return nullptr;
+		}
+
+		/**
+		 * Finds a percussion sample given its instrument.
+		 * 
+		 * \param _ui32Bank The sample bank.
+		 * \param _ui32Inst The instrument index.
+		 * \param _ui32Sample The sample index.
+		 * \return Returns the given percussion sample or nullptr if it is not found.
+		 **/
+		NS4_SAMPLE *					FindInstSample( uint32_t _ui32Bank, uint32_t _ui32Inst, uint32_t _ui32Sample ) {
+			for ( auto I = m_vSamples.size(); I--; ) {
+				if ( m_vSamples[I].ui32Bank == _ui32Bank && m_vSamples[I].ui32Inst == _ui32Inst && m_vSamples[I].ui32Samp == _ui32Sample ) {
+					return &m_vSamples[I];
+				}
+			}
+			return nullptr;
+		}
 		
 
 	};

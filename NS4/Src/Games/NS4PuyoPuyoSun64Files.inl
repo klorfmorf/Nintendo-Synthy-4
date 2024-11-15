@@ -1,18 +1,18 @@
-﻿#define NS4_GAME							u8"Puyo Puyo Sun (ぷよぷよSUN)"
+﻿#define NS4_GAME							u8"Puyo Puyo Sun 64 (ぷよぷよSUN 64)"
 #define NS4_COMPOSERS						u8"Katsumi Tanaka"
 #define NS4_YEAR							u8"1996"
 #define NS4_FOLDER							u8"Puyo Puyo Sun 64"
 #define NS4_BANK							u8"00"
 #define NS4_REVERB_TRACKS					1
-#define NS4_REVERB							ns4::CReverb::NS4_T_PILOTWINGS_64_0
+#define NS4_REVERB							ns4::CReverb::NS4_T_PUYO_PUYO_SUN_64_0
 #define NS4_ORIG_HZ							22047
 #define NS4_CURVE							40.0
-#define NS4_OUT_DIRECTORY					u8"F:\\N64OST\\Puyo Puyo Sun 64\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Puyo Puyo Sun 64\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_WET_FILTER_FREQ					0.0
 #define NS4_PERC_CHANNEL					9
 //#define NS4_ENV_MULTIPLIER					1000.0
-#define NS4_ROOT_OFFSET						4
+//#define NS4_ROOT_OFFSET						4
 #define NS4_ENV_MULTIPLIER					(1.0 / 1.0)
 #define NS4_REL_MULTIPLIER					(1.0 / 1.0)
 #define NS4_PERC_REL_MULTIPLIER				20.0
@@ -21,45 +21,200 @@
 #define NS4_EXPONENTIAL_ENVELOPE			true
 
 #define NS4_OVERSAMPLING					(1 << 2)
-#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
 #define NS4_ANTI_ALIASING_LEVEL				2
 #define NS4_ANTI_ALIASING_HZ				20000.0
 
-{ u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid", u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid TrackParseDebug.txt", u8"Track 00", 0 },			// カーバンクル
-{ u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid", u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid TrackParseDebug.txt", u8"Track 01", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid", u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid TrackParseDebug.txt", u8"Track 02", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid", u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid TrackParseDebug.txt", u8"Track 03", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid", u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid TrackParseDebug.txt", u8"Track 04", 0 },			// ＲＥＳＵＬＴ
-{ u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid", u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid TrackParseDebug.txt", u8"Track 05", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid", u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid TrackParseDebug.txt", u8"Track 06", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid", u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid TrackParseDebug.txt", u8"Track 07", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid", u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid TrackParseDebug.txt", u8"Track 08", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid", u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid TrackParseDebug.txt", u8"Track 09", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid", u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid TrackParseDebug.txt", u8"Track 0A", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid", u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid TrackParseDebug.txt", u8"Track 0B", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid", u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid TrackParseDebug.txt", u8"Track 0C", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid", u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid TrackParseDebug.txt", u8"Track 0D", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid", u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid TrackParseDebug.txt", u8"Track 0E", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid", u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid TrackParseDebug.txt", u8"Track 0F", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid", u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid TrackParseDebug.txt", u8"Track 10", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid", u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid TrackParseDebug.txt", u8"Track 11", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid", u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid TrackParseDebug.txt", u8"Track 12", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid", u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid TrackParseDebug.txt", u8"Track 13", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid", u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid TrackParseDebug.txt", u8"Track 14", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid", u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid TrackParseDebug.txt", u8"Track 15", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid", u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid TrackParseDebug.txt", u8"Track 16", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid", u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid TrackParseDebug.txt", u8"Track 17", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid", u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid TrackParseDebug.txt", u8"Track 18", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid", u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid TrackParseDebug.txt", u8"Track 19", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid", u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid TrackParseDebug.txt", u8"Track 1A", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid", u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid TrackParseDebug.txt", u8"Track 1B", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid", u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid TrackParseDebug.txt", u8"Track 1C", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid", u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid TrackParseDebug.txt", u8"Track 1D", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid", u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid TrackParseDebug.txt", u8"Track 1E", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid", u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid TrackParseDebug.txt", u8"Track 1F", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid", u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid TrackParseDebug.txt", u8"Track 20", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid", u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid TrackParseDebug.txt", u8"Track 21", 0 },
-{ u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid", u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid TrackParseDebug.txt", u8"Track 22", 0 },
+{ u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid", u8"Puyo Puyo Sun 64 (J) 00000005 007A2E94.mid TrackParseDebug.txt", u8"ＴＩＴＬＥ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\05.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid", u8"Puyo Puyo Sun 64 (J) 0000000B 007ADBDC.mid TrackParseDebug.txt", u8"ＲＵＬＥ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\0B.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid", u8"Puyo Puyo Sun 64 (J) 0000000C 007AEDE0.mid TrackParseDebug.txt", u8"ＭＯＤＥ　ＳＥＬＥＣＴ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\0C.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid", u8"Puyo Puyo Sun 64 (J) 0000000D 007AF3C4.mid TrackParseDebug.txt", u8"MAP", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\0D.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid", u8"Puyo Puyo Sun 64 (J) 0000001F 007C2C10.mid TrackParseDebug.txt", u8"練習", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\1F.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid", u8"Puyo Puyo Sun 64 (J) 00000006 007A3FC4.mid TrackParseDebug.txt", u8"ＥＡＳＹ　ＭＯＤＥ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\06.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid", u8"Puyo Puyo Sun 64 (J) 00000007 007A5B34.mid TrackParseDebug.txt", u8"ＮＯＲＭＡＬ　ＭＯＤＥ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\07.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid", u8"Puyo Puyo Sun 64 (J) 00000008 007A75D4.mid TrackParseDebug.txt", u8"ＨＡＲＤ　ＭＯＤＥ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\08.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid", u8"Puyo Puyo Sun 64 (J) 00000009 007A9764.mid TrackParseDebug.txt", u8"ＲＩＶＡＬ　ＭＯＤＥ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\09.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid", u8"Puyo Puyo Sun 64 (J) 00000021 007C39DC.mid TrackParseDebug.txt", u8"とこなぞ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\21.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid", u8"Puyo Puyo Sun 64 (J) 00000017 007B5ACC.mid TrackParseDebug.txt", u8"とことん", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\17.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid", u8"Puyo Puyo Sun 64 (J) 00000020 007C3314.mid TrackParseDebug.txt", u8"ＴＯＵＲＮＡＭＥＮＴ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\20.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid", u8"Puyo Puyo Sun 64 (J) 00000002 007A19E0.mid TrackParseDebug.txt", u8"ＦＡＮＦＡＲＥ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\02.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid", u8"Puyo Puyo Sun 64 (J) 0000000F 007AFD54.mid TrackParseDebug.txt", u8"漫才（１）", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\0F.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid", u8"Puyo Puyo Sun 64 (J) 00000013 007B2C28.mid TrackParseDebug.txt", u8"漫才（２）", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\13.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid", u8"Puyo Puyo Sun 64 (J) 00000014 007B31B0.mid TrackParseDebug.txt", u8"漫才（３）", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\14.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid", u8"Puyo Puyo Sun 64 (J) 0000001A 007B7970.mid TrackParseDebug.txt", u8"漫才（４）", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\1A.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid", u8"Puyo Puyo Sun 64 (J) 0000001B 007B866C.mid TrackParseDebug.txt", u8"漫才（５）", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\1B.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid", u8"Puyo Puyo Sun 64 (J) 0000001D 007BD38C.mid TrackParseDebug.txt", u8"ＲＯＬＬ　２", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\1D.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid", u8"Puyo Puyo Sun 64 (J) 00000000 007A0154.mid TrackParseDebug.txt", u8"カーバンクル", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\00.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid", u8"Puyo Puyo Sun 64 (J) 00000010 007B059C.mid TrackParseDebug.txt", u8"ＰＩＮＣＨ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\10.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid", u8"Puyo Puyo Sun 64 (J) 0000000A 007AB6F8.mid TrackParseDebug.txt", u8"ラスボス", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\0A.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid", u8"Puyo Puyo Sun 64 (J) 0000001E 007C1A88.mid TrackParseDebug.txt", u8"実戦", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\1E.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid", u8"Puyo Puyo Sun 64 (J) 00000001 007A17F4.mid TrackParseDebug.txt", u8"乱入", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\01.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid", u8"Puyo Puyo Sun 64 (J) 00000022 007C4574.mid TrackParseDebug.txt", u8"優勝", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\22.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid", u8"Puyo Puyo Sun 64 (J) 00000011 007B1800.mid TrackParseDebug.txt", u8"ＮＡＭＥ　ＥＮＴＲＹ　１", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\11.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid", u8"Puyo Puyo Sun 64 (J) 00000016 007B5074.mid TrackParseDebug.txt", u8"ＮＡＭＥ　ＥＮＴＲＹ　２", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\16.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid", u8"Puyo Puyo Sun 64 (J) 0000000E 007AFA48.mid TrackParseDebug.txt", u8"ＧＡＭＥ　ＯＶＥＲ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\0E.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid", u8"Puyo Puyo Sun 64 (J) 00000004 007A2190.mid TrackParseDebug.txt", u8"ＲＥＳＵＬＴ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\04.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid", u8"Puyo Puyo Sun 64 (J) 00000003 007A1CB8.mid TrackParseDebug.txt", u8"ＲＡＮＫＩＮＧ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\03.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid", u8"Puyo Puyo Sun 64 (J) 00000015 007B41A8.mid TrackParseDebug.txt", u8"ＥＮＤＩＮＧ　１", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\15.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid", u8"Puyo Puyo Sun 64 (J) 00000012 007B1EEC.mid TrackParseDebug.txt", u8"ＥＮＤＩＮＧ　２", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\12.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid", u8"Puyo Puyo Sun 64 (J) 00000018 007B6CA4.mid TrackParseDebug.txt", u8"ＥＮＤＩＮＧ　３", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\18.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid", u8"Puyo Puyo Sun 64 (J) 00000019 007B7458.mid TrackParseDebug.txt", u8"ＥＮＤＩＮＧ　４", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\19.txt" ) },
+	},
+},
+{ u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid", u8"Puyo Puyo Sun 64 (J) 0000001C 007B8C90.mid TrackParseDebug.txt", u8"ＳＴＡＦＦ　ＲＯＬＬ", 0,
+	1, {
+		{ NS4_SET_BANK_PUNK7890( u8"\\Banks\\1C.txt" ) },
+	},
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 { u8"Puyo Puyo Sun 64 (J) 00000023 007C4A58.mid", u8"Puyo Puyo Sun 64 (J) 00000023 007C4A58.mid TrackParseDebug.txt", u8"00000023 007C4A58", 0 },
 { u8"Puyo Puyo Sun 64 (J) 00000024 007C4AB4.mid", u8"Puyo Puyo Sun 64 (J) 00000024 007C4AB4.mid TrackParseDebug.txt", u8"00000024 007C4AB4", 0 },

@@ -12,7 +12,7 @@
 #define NS4_WET_FILTER_FREQ					0.0//(NS4_ORIG_HZ / 4.0)
 #define NS4_NO_PROGRAM_CHANGE_SORT			true
 #define NS4_PROG_CHANGE_SETS_VOL_PAN		false
-#define NS4_PITCH_BEND_SCALE				2.25
+//#define NS4_PITCH_BEND_SCALE				2.25
 //#define NS4_MIN_NOTE						13
 //#define NS4_MIN_ATK							(16.0 / 1000.0)
 #define NS4_ADSR_IN_MIDI					true
@@ -28,7 +28,14 @@
 //{ u8"pitchtest2.mid", u8"pitchtest2.mid TrackParseDebug.txt", u8"pitchtest2", 2 },
 //{ u8"test2.mid", u8"test2.mid TrackParseDebug.txt", u8"test2", 2 },
 
-{ u8"Neon Genesis Evangelion (J) 00000000 01BD5660.mid", u8"Neon Genesis Evangelion (J) 00000000 01BD5660.mid TrackParseDebug.txt", u8"00000000 01BD5660", 3 },
+{ u8"Neon Genesis Evangelion (J) 00000009 01BF6F00.mid", u8"Neon Genesis Evangelion (J) 00000009 01BF6F00.mid TrackParseDebug.txt", u8"A Step Forward Into Terror", 3,
+	1,
+	{
+		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000009 01BF6F00_AdditionalPart1.mid", false ) },
+	}
+},
+
+{ u8"Neon Genesis Evangelion (J) 00000000 01BD5660.mid", u8"Neon Genesis Evangelion (J) 00000000 01BD5660.mid TrackParseDebug.txt", u8"THANATOS", 3 },
 { u8"Neon Genesis Evangelion (J) 00000001 01BD7670.mid", u8"Neon Genesis Evangelion (J) 00000001 01BD7670.mid TrackParseDebug.txt", u8"Komm, süsser Tod", 2,
 	1,
 	{
@@ -43,7 +50,7 @@
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 00000002 01BE1790_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 00000002 01BE1790_AdditionalPart1.mid TrackParseDebug.txt", u8"00000002 01BE1790_AdditionalPart1", 2 },
-{ u8"Neon Genesis Evangelion (J) 00000003 01BE8A80.mid", u8"Neon Genesis Evangelion (J) 00000003 01BE8A80.mid TrackParseDebug.txt", u8"THANATOS - If I Can’t be Yours", 2,
+{ u8"Neon Genesis Evangelion (J) 00000003 01BE8A80.mid", u8"Neon Genesis Evangelion (J) 00000003 01BE8A80.mid TrackParseDebug.txt", u8"THANATOS - If I Can’t Be Yours", 2,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000003 01BE8A80_AdditionalPart1.mid", false ) },
@@ -103,51 +110,51 @@
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 0000000E 01C0F350_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 0000000E 01C0F350_AdditionalPart1.mid TrackParseDebug.txt", u8"0000000E 01C0F350_AdditionalPart1", 2 },
-{ u8"Neon Genesis Evangelion (J) 0000000F 01C10250.mid", u8"Neon Genesis Evangelion (J) 0000000F 01C10250.mid TrackParseDebug.txt", u8"Marking Time, Waiting for Death (Part 1)", 3,
+{ u8"Neon Genesis Evangelion (J) 0000000F 01C10250.mid", u8"Neon Genesis Evangelion (J) 0000000F 01C10250.mid TrackParseDebug.txt", u8"Preview of Next Time", 3,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 0000000F 01C10250_AdditionalPart1.mid", false ) },
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 0000000F 01C10250_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 0000000F 01C10250_AdditionalPart1.mid TrackParseDebug.txt", u8"0000000F 01C10250_AdditionalPart1", 2 },
-{ u8"Neon Genesis Evangelion (J) 00000010 01C1A3B0.mid", u8"Neon Genesis Evangelion (J) 00000010 01C1A3B0.mid TrackParseDebug.txt", u8"Marking Time, Waiting for Death (Part 2)", 3 },
-{ u8"Neon Genesis Evangelion (J) 00000011 01C1A750.mid", u8"Neon Genesis Evangelion (J) 00000011 01C1A750.mid TrackParseDebug.txt", u8"NERV", 3,
+{ u8"Neon Genesis Evangelion (J) 00000010 01C1A3B0.mid", u8"Neon Genesis Evangelion (J) 00000010 01C1A3B0.mid TrackParseDebug.txt", u8"Marking Time, Waiting for Death (Part 1)", 3 },
+{ u8"Neon Genesis Evangelion (J) 00000011 01C1A750.mid", u8"Neon Genesis Evangelion (J) 00000011 01C1A750.mid TrackParseDebug.txt", u8"Marking Time, Waiting for Death (Part 2)", 3,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000011 01C1A750_AdditionalPart1.mid", false ) },
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 00000011 01C1A750_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 00000011 01C1A750_AdditionalPart1.mid TrackParseDebug.txt", u8"00000011 01C1A750_AdditionalPart1", 2 },
-{ u8"Neon Genesis Evangelion (J) 00000012 01C1FDD0.mid", u8"Neon Genesis Evangelion (J) 00000012 01C1FDD0.mid TrackParseDebug.txt", u8"The Beast II", 3,
+{ u8"Neon Genesis Evangelion (J) 00000012 01C1FDD0.mid", u8"Neon Genesis Evangelion (J) 00000012 01C1FDD0.mid TrackParseDebug.txt", u8"NERV", 3,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000012 01C1FDD0_AdditionalPart1.mid", false ) },
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 00000012 01C1FDD0_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 00000012 01C1FDD0_AdditionalPart1.mid TrackParseDebug.txt", u8"00000012 01C1FDD0_AdditionalPart1", 0 },
-{ u8"Neon Genesis Evangelion (J) 00000013 01C21530.mid", u8"Neon Genesis Evangelion (J) 00000013 01C21530.mid TrackParseDebug.txt", u8"She Said, “Don’t Make Others Suffer for Your Personal Hatred”", 3,
+{ u8"Neon Genesis Evangelion (J) 00000013 01C21530.mid", u8"Neon Genesis Evangelion (J) 00000013 01C21530.mid TrackParseDebug.txt", u8"The Beast II", 3,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000013 01C21530_AdditionalPart1.mid", false ) },
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 00000013 01C21530_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 00000013 01C21530_AdditionalPart1.mid TrackParseDebug.txt", u8"00000013 01C21530_AdditionalPart1", 0 },
-{ u8"Neon Genesis Evangelion (J) 00000014 01C255E0.mid", u8"Neon Genesis Evangelion (J) 00000014 01C255E0.mid TrackParseDebug.txt", u8"Messiah Oratorio, ‘Halleluijah’ Chorus", 3,
+{ u8"Neon Genesis Evangelion (J) 00000014 01C255E0.mid", u8"Neon Genesis Evangelion (J) 00000014 01C255E0.mid TrackParseDebug.txt", u8"She Said, “Don’t Make Others Suffer for Your Personal Hatred”", 3,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000014 01C255E0_AdditionalPart1.mid", false ) },
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 00000014 01C255E0_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 00000014 01C255E0_AdditionalPart1.mid TrackParseDebug.txt", u8"00000014 01C255E0_AdditionalPart1", 0 },
-{ u8"Neon Genesis Evangelion (J) 00000015 01C29390.mid", u8"Neon Genesis Evangelion (J) 00000015 01C29390.mid TrackParseDebug.txt", u8"THANATOS", 3,
+{ u8"Neon Genesis Evangelion (J) 00000015 01C29390.mid", u8"Neon Genesis Evangelion (J) 00000015 01C29390.mid TrackParseDebug.txt", u8"Messiah Oratorio, ‘Halleluijah’ Chorus", 3,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000015 01C29390_AdditionalPart1.mid", false ) },
 	}
 },
 //{ u8"Neon Genesis Evangelion (J) 00000015 01C29390_AdditionalPart1.mid", u8"Neon Genesis Evangelion (J) 00000015 01C29390_AdditionalPart1.mid TrackParseDebug.txt", u8"00000015 01C29390_AdditionalPart1", 0 },
-{ u8"Neon Genesis Evangelion (J) 00000016 01C2BE60.mid", u8"Neon Genesis Evangelion (J) 00000016 01C2BE60.mid TrackParseDebug.txt", u8"The Beast", 3 },
-{ u8"Neon Genesis Evangelion (J) 00000017 01C2DE70.mid", u8"Neon Genesis Evangelion (J) 00000017 01C2DE70.mid TrackParseDebug.txt", u8"00000017 01C2DE70", 3,
+//{ u8"Neon Genesis Evangelion (J) 00000016 01C2BE60.mid", u8"Neon Genesis Evangelion (J) 00000016 01C2BE60.mid TrackParseDebug.txt", u8"THANATOS", 3 },
+{ u8"Neon Genesis Evangelion (J) 00000017 01C2DE70.mid", u8"Neon Genesis Evangelion (J) 00000017 01C2DE70.mid TrackParseDebug.txt", u8"The Beast", 3,
 	1,
 	{
 		{ NS4_ADD_MIDI_FILE( u8"Neon Genesis Evangelion (J) 00000017 01C2DE70_AdditionalPart1.mid", false ) },

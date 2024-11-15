@@ -302,6 +302,8 @@ namespace ns4 {
 #define NS4_COPY_NOTE( CHAN, W0, X0, Y0, Z0, CNT, NOTE, W1, X1, Y1, Z1 )																																		\
 																ns4::CMidiFile::NS4_ES_PRE_UNROLL, ns4::CMidiFile::NS4_E_COPY_NOTE, (CHAN), 0, 0, { (W0), (X0), (Y0), (Z0) }, { (W1), (X1), (Y1), (Z1) }, (CNT), (NOTE)
 			
+#define NS4_SET_BANK_PUNK7890( FILE )							ns4::CMidiFile::NS4_ES_PRE_UNROLL, ns4::CMidiFile::NS4_E_SET_BANK_PUNK7890, NS4_STRING_OP( FILE )
+
 
 #define NS4_NO_CMDS												0, { { ns4::CMidiFile::NS4_ES_NONE, ns4::CMidiFile::NS4_E_NONE }, }
 		};
@@ -664,7 +666,7 @@ namespace ns4 {
 		 * \param _pdStartTime If not nullptr, the start time of playback.
 		 * \return Returns the rendered audio.
 		 */
-		lwaudio &						RenderNotesToStereo( lwaudio &_aResult, size_t _stTrack, const NS4_TRACK_RENDER_OPTIONS &_troOptions, const CSoundBank &_sbSoundBank,
+		lwaudio &						RenderNotesToStereo( lwaudio &_aResult, size_t _stTrack, const NS4_TRACK_RENDER_OPTIONS &_troOptions, CSoundBank &_sbSoundBank,
 			lwaudio * _paWet,
 			uint64_t * _pui64TimeOfLastSound,
 			double * _pdStartTime ) const;
@@ -683,8 +685,9 @@ namespace ns4 {
 		 * \param _pmMods The array of modifications.
 		 * \param _esStage The modification stage (NS4_ES_PRE_UNROLL or NS4_ES_POST_SUPPLEMENTAL).
 		 * \param _pcMidiFolder The MIDI folder where additional MIDI files might be loaded.
+		 * \param _sbSoundBank The current sound bank.
 		 */
-		void							ApplyPreUnrollMods( uint32_t _ui32Total, const NS4_MODIFIER * _pmMods, NS4_EVENT_STAGE _esStage, const char * _pcMidiFolder );
+		void							ApplyPreUnrollMods( uint32_t _ui32Total, const NS4_MODIFIER * _pmMods, NS4_EVENT_STAGE _esStage, const char * _pcMidiFolder, CSoundBank &_sbSoundBank );
 
 		/**
 		 * Reners post-synthesis additions.
@@ -1279,6 +1282,8 @@ namespace ns4 {
 			if ( IsNoteOff( _teEvent ) ) { return 4000; }
 			if ( IsLoopStart( _teEvent ) ) { return 3500; }
 
+			if ( IsControllerOfType( _teEvent, NS4_C_BANK_SELECT ) ) { return 3002; }
+			if ( IsControllerOfType( _teEvent, NS4_C_LSB ) ) { return 3001; }
 			if ( IsProgramChange( _teEvent ) ) { return 3000; }
 			
 

@@ -162,7 +162,7 @@ namespace ns4 {
 				std::memcpy( tTmp1.data(), _uDst.tSamples.data(), tTmp1.size() * sizeof( lwtrack::value_type ) );
 
 				CIrConvolution::Convolve( tTmp1, _uDst.tSamples, iIr );
-				ns4::CWavLib::ScaleSamples( _uDst.tSamples, 2.0 );
+				//ns4::CWavLib::ScaleSamples( _uDst.tSamples, 2.0 );
 			}
 
 

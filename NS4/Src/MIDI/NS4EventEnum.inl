@@ -34,6 +34,7 @@ NS4_ENUM( NS4_E_MUTE_TAGGED_TRACKS ),							/**< Mutes all tracks that have been
 NS4_ENUM( NS4_E_SET_TEMPO_BY_MPQN ),							/**< Sets the microseconds-per-quarter note of a song. */
 NS4_ENUM( NS4_E_TIMELINE_IGNORE_TRACK ),						/**< Adds a track (by channel) to the timeline's track-ignore set, causing its loop points to be ignored during the creation of the timeline but present during actual track renering. */
 NS4_ENUM( NS4_E_REMOVE_LOOP_POINTS ),							/**< Removes the loop points found in a given track.  Only useful in the pre-unroll or post-supplemental stages. */
+NS4_ENUM( NS4_E_REMOVE_LOOP_POINTS_BY_TRACK_INDEX ),			/**< Removes the loop points found in a given track.  Only useful in the pre-unroll or post-supplemental stages.  The channel is treated as a track index. */
 NS4_ENUM( NS4_E_REMOVE_ALL_LOOP_POINTS ),						/**< Removes the loop points found all tracks.  Only useful in the pre-unroll or post-supplemental stages. */
 NS4_ENUM( NS4_E_SET_LOOP_POINTS ),								/**< Removes existing loop points in a given track and then inserts both a loop-start and a loop-end at the given measures (tsTime0 and tsTime1).  Only useful in the pre-unroll or post-supplemental stages. */
 NS4_ENUM( NS4_E_SET_LOOP_POINTS_ALL_TRACKS ),					/**< Same as NS4_E_SET_LOOP_POINTS, but applied to all tracks in the MIDI file. */
@@ -71,7 +72,10 @@ NS4_ENUM( NS4_E_SAMPLE_INSERT_CONTROL_LINE ),					/**< Inserts a series of contr
 NS4_ENUM( NS4_E_SAMPLE_END ),									/**< Stops the playback of the current sample. */
 NS4_ENUM( NS4_E_STOP_SAMPLE_AT_TRACK_END ),						/**< Stops the sample at the end of the allocated track.  If not set, samples can extend the given track to accomodate themselves. */
 NS4_ENUM( NS4_E_FADE_AT ),										/**< Fades the rendered result at the given time.  Uses the same fade as the global fade, which will also be applied.  ui32Channel = number of loops, tsTime0 is an additional time offset, and dOperandDouble0 is an additional seconds offset. */
+
 NS4_ENUM( NS4_E_ADD_MIDI_FILE ),								/**< Loads the given MIDI file (pcStringOp), appending it to the end of the current list of tracks.  If ui32Operand0 is non-zero, the first track of the loaded MIDI file is not appended. */
+NS4_ENUM( NS4_E_SET_BANK_PUNK7890 ),							/**< Overwrites envelopes, key ranges, etc., based off the file format created by punk7890.  Changes made to the sound bank are permanent, so this is typically used on every track in a set. */
+
 NS4_ENUM( NS4_E_GLOBAL_SET_PERC_RELEASE_ADSR ),					/**< Sets the ADSR percussion release rate for a given track. */
 NS4_ENUM( NS4_E_GLOBAL_SET_FADE_FROM_END ),						/**< Sets the fade ending point to a number of seconds (dOperandDouble0) before the last note-off event in the non-looping MIDI file.  If the call to GetBestRunTime() sees loop points, this has no effect. */
 NS4_ENUM( NS4_E_GLOBAL_SET_FADE_START ),						/**< Sets the fade starting point to an absolute time in seconds (dOperandDouble0) in the MIDI file. */

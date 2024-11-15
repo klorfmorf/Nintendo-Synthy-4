@@ -98,6 +98,13 @@ namespace ns4 {
 			return true;
 		}
 
+		/**
+		 * Determines if it is at the end of the file.
+		 * 
+		 * \return Returns true if the end of the file has been reached.
+		 **/
+		bool								Ended() const { return m_sPos >= m_vData.size(); }
+
 
 
 	protected :
