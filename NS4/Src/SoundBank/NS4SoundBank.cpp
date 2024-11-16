@@ -300,9 +300,9 @@ namespace ns4 {
 		CByteStream bsStream;
 		if ( !bsStream.LoadFile( _pcPath ) ) { return false; }
 
-		bool bHeader = true, bPerc = false;
+		//bool bHeader = true, bPerc = false;
 		NS4_SAMPLE * psSample = nullptr;
-		uint32_t ui32Bank, ui32Inst, ui32Sample, ui32InstVol, ui32InstPan;
+		uint32_t ui32Bank = 0, ui32Inst = 0, ui32Sample = 0, ui32InstVol = 0x7F, ui32InstPan = 0x40, ui32BendRange = 200;
 		while ( !bsStream.Ended() ) {
 			auto sLine = bsStream.GetLine();
 
@@ -310,25 +310,27 @@ namespace ns4 {
 			uint32_t ui32Parm0, ui32Parm1, ui32Parm2;
 
 			if ( std::sscanf( sLine.c_str(), "BANK_%X_PERC_INSTRUMENT_%X_HEADER", &ui32Parm0, &ui32Parm1 ) == 2 ) {
-				bHeader = true;
-				bPerc = true;
+				/*bHeader = true;
+				bPerc = true;*/
 				ui32Bank = ui32Parm0;
 				ui32Inst = ui32Parm1;
+				ui32BendRange = 200;
 			}
 			else if ( std::sscanf( sLine.c_str(), "BANK_%X_PERC_%X", &ui32Parm0, &ui32Parm1 ) == 2 ) {
-				bHeader = false;
-				bPerc = true;
+				/*bHeader = false;
+				bPerc = true;*/
 				ui32Bank = ui32Parm0;
 				ui32Inst = ui32Parm1;
 				psSample = FindPerc( ui32Inst );
 				if ( psSample ) {
 					psSample->ui32InstVol = ui32InstVol;
 					psSample->ui32InstPan = ui32InstPan;
+					psSample->ui32BendRange = ui32BendRange;
 				}
 			}
 			else if ( std::sscanf( sLine.c_str(), "BANK_%X_INSTR_%X_SND_%X", &ui32Parm0, &ui32Parm1, &ui32Parm2 ) == 3 ) {
-				bHeader = false;
-				bPerc = false;
+				/*bHeader = false;
+				bPerc = false;*/
 				ui32Bank = ui32Parm0;
 				ui32Inst = ui32Parm1;
 				ui32Sample = ui32Parm2;
@@ -336,13 +338,15 @@ namespace ns4 {
 				if ( psSample ) {
 					psSample->ui32InstVol = ui32InstVol;
 					psSample->ui32InstPan = ui32InstPan;
+					psSample->ui32BendRange = ui32BendRange;
 				}
 			}
 			else if ( std::sscanf( sLine.c_str(), "BANK_%X_INSTR_%X_HEADER", &ui32Parm0, &ui32Parm1 ) == 2 ) {
-				bHeader = true;
-				bPerc = false;
+				/*bHeader = true;
+				bPerc = false;*/
 				ui32Bank = ui32Parm0;
 				ui32Inst = ui32Parm1;
+				ui32BendRange = 200;
 			}
 
 
@@ -352,6 +356,9 @@ namespace ns4 {
 			}
 			else if ( std::sscanf( sLine.c_str(), "->Instrument Pan: %X", &ui32Parm0 ) == 1 ) {
 				ui32InstPan = ui32Parm0;
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Bend Range: %X", &ui32Parm0 ) == 1 ) {
+				ui32BendRange = ui32Parm0;
 			}
 
 

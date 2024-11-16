@@ -2922,7 +2922,8 @@ namespace ns4 {
 			NS4_SQRT_0_5,															// dTapVol
 			0,																		// i64TapOffset
 			NS4_NO_FADE,
-			NS4_NO_LPF,
+			NS4_LPF( 1008.0 * 2.0, 6400.0 / 22047.0 * 5.0, 1.0, NS4_FILTER_DB_TO_ORDER( 12 ) ),														// dLpfFactor
+			//NS4_NO_LPF,
 		},	// 178
 	};
 
