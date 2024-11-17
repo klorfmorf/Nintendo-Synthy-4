@@ -247,7 +247,7 @@ int oldmain() {
 
 #if 0
 	// Tools somehow stopped being able to load .n64 files due to not automatically byte-swapping them.
-#define LSN_SWAP_ME			L"Monaco Grand Prix (USA)"
+#define LSN_SWAP_ME			L"Mischief Makers (USA) (Rev A)"
 #define LSN_SWAP_ME_DIR		L"C:\\My Projects\\N64\\Roms\\"
 	{
 		const wchar_t * pu16ByteswapMe = LSN_SWAP_ME_DIR LSN_SWAP_ME L".n64";
@@ -340,7 +340,8 @@ int oldmain() {
 //#include "Src/Games/NS4ReVoltFiles.inl"
 
 //#include "Src/Games/NS4Pilotwings64Files.inl"
-#include "Src/Games/NS4PuyoPuyoSun64Files.inl"
+//#include "Src/Games/NS4PuyoPuyoSun64Files.inl"
+#include "Src/Games/NS4MischiefMakersFiles.inl"
 //#include "Src/Games/NS4ExtremeGFiles.inl"
 //#include "Src/Games/NS4ExtremeGXG2Files.inl"
 //#include "Src/Games/NS4ChopperAttackFiles.inl"
@@ -352,7 +353,7 @@ int oldmain() {
 //#include "Src/Games/NS4AeroFightersAssaultOverSamplingFiles.inl"
 //#include "Src/Games/NS4F1WorldGrandPrixFiles.inl"
 //#include "Src/Games/NS4BodyHarvestFiles.inl"
-//#include "Src/Games/NS4MischiefMakersFiles.inl"
+
 //#include "Src/Games/NS4ChameleonTwistFiles.inl"
 //#include "Src/Games/NS4ChameleonTwist2Files.inl"
 //#include "Src/Games/NS4BombermanHeroFiles.inl"

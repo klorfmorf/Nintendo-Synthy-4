@@ -303,6 +303,8 @@ namespace ns4 {
 		//bool bHeader = true, bPerc = false;
 		NS4_SAMPLE * psSample = nullptr;
 		uint32_t ui32Bank = 0, ui32Inst = 0, ui32Sample = 0, ui32InstVol = 0x7F, ui32InstPan = 0x40, ui32BendRange = 200;
+		uint8_t ui8VibType = 0, ui8VibRate = 0, ui8VibDepth = 0, ui8VibDelay = 0;
+		uint8_t ui8TremType = 0, ui8TremRate = 0, ui8TremDepth = 0, ui8TremDelay = 0;
 		while ( !bsStream.Ended() ) {
 			auto sLine = bsStream.GetLine();
 
@@ -326,6 +328,16 @@ namespace ns4 {
 					psSample->ui32InstVol = ui32InstVol;
 					psSample->ui32InstPan = ui32InstPan;
 					psSample->ui32BendRange = ui32BendRange;
+
+					psSample->ui32VibratoType = ui8VibType;
+					psSample->ui32VibratoSpeed = ui8VibRate;
+					psSample->ui32VibratoAmount = ui8VibDepth;
+					psSample->ui32VibratoDelay = ui8VibDelay;
+
+					psSample->ui32TremType = ui8TremType;
+					psSample->ui32TremSpeed = ui8TremRate;
+					psSample->ui32TremAmount = ui8TremDepth;
+					psSample->ui32TremDelay = ui8TremDelay;
 				}
 			}
 			else if ( std::sscanf( sLine.c_str(), "BANK_%X_INSTR_%X_SND_%X", &ui32Parm0, &ui32Parm1, &ui32Parm2 ) == 3 ) {
@@ -339,6 +351,16 @@ namespace ns4 {
 					psSample->ui32InstVol = ui32InstVol;
 					psSample->ui32InstPan = ui32InstPan;
 					psSample->ui32BendRange = ui32BendRange;
+
+					psSample->ui32VibratoType = ui8VibType;
+					psSample->ui32VibratoSpeed = ui8VibRate;
+					psSample->ui32VibratoAmount = ui8VibDepth;
+					psSample->ui32VibratoDelay = ui8VibDelay;
+
+					psSample->ui32TremType = ui8TremType;
+					psSample->ui32TremSpeed = ui8TremRate;
+					psSample->ui32TremAmount = ui8TremDepth;
+					psSample->ui32TremDelay = ui8TremDelay;
 				}
 			}
 			else if ( std::sscanf( sLine.c_str(), "BANK_%X_INSTR_%X_HEADER", &ui32Parm0, &ui32Parm1 ) == 2 ) {
@@ -359,6 +381,32 @@ namespace ns4 {
 			}
 			else if ( std::sscanf( sLine.c_str(), "->Instrument Bend Range: %X", &ui32Parm0 ) == 1 ) {
 				ui32BendRange = ui32Parm0;
+			}
+
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Tremelo Type: %X", &ui32Parm0 ) == 1 ) {
+				ui8TremType = uint8_t( ui32Parm0 );
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Tremelo Rate: %X", &ui32Parm0 ) == 1 ) {
+				ui8TremRate = uint8_t( ui32Parm0 );
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Tremelo Depth: %X", &ui32Parm0 ) == 1 ) {
+				ui8TremDepth = uint8_t( ui32Parm0 );
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Tremelo Delay: %X", &ui32Parm0 ) == 1 ) {
+				ui8TremDelay = uint8_t( ui32Parm0 );
+			}
+
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Vibrato Type: %X", &ui32Parm0 ) == 1 ) {
+				ui8VibType = uint8_t( ui32Parm0 );
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Vibrato Rate: %X", &ui32Parm0 ) == 1 ) {
+				ui8VibRate = uint8_t( ui32Parm0 );
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Vibrato Depth: %X", &ui32Parm0 ) == 1 ) {
+				ui8VibDepth = uint8_t( ui32Parm0 );
+			}
+			else if ( std::sscanf( sLine.c_str(), "->Instrument Vibrato Delay: %X", &ui32Parm0 ) == 1 ) {
+				ui8VibDelay = uint8_t( ui32Parm0 );
 			}
 
 

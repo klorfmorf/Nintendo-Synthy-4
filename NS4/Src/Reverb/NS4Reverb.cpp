@@ -2500,10 +2500,10 @@ namespace ns4 {
 		// Mischief Makers.
 		{
 			NS4_TAPS( m_rtMischiefMakers0 ),
-			4.1430163096543166,//1.1729808576265039,								// dTapVol
+			NS4_SQRT_0_5/*4.1430163096543166*/,//1.1729808576265039,								// dTapVol
 			0,																		// i64TapOffset
 			NS4_NO_FADE,
-			NS4_NO_LPF,
+			NS4_LPF( 1008.0 * 2.0, 6400.0 / 22047.0 * 5.0, 1.0, NS4_FILTER_DB_TO_ORDER( 12 ) ),														// dLpfFactor
 		},	// 119
 		// Last Legion UX.
 		{
