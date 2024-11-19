@@ -1,6 +1,6 @@
 #define NS4_GAME							u8"Perfect Dark"
 #define NS4_TITLE_POSTFIX					u8" (Surround)"
-#define NS4_COMPOSERS						u8"Graeme Norgate, Grant Kirkhope, David Clynick"
+#define NS4_COMPOSERS						u8"David Clynick, Graeme Norgate, Grant Kirkhope"
 #define NS4_YEAR							u8"2000"
 #define NS4_FOLDER							u8"Perfect Dark"
 #define NS4_BANK							u8"01"
@@ -8,14 +8,17 @@
 #define NS4_REVERB							ns4::CReverb::NS4_T_PERFECT_DARK_0
 #define NS4_ORIG_HZ							22018
 #define NS4_CURVE							20.0
-#define NS4_OUT_DIRECTORY					u8"T:\\N64OST\\Perfect Dark\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Perfect Dark (Surround)\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_WET_FILTER_FREQ					0.0//(NS4_ORIG_HZ / std::pow( 2.0, 1.125 ))
 //#define NS4_MASTER_REVERB_VOLUME			2.0
 #define NS4_VIB_SCALE						2.0
 #define NS4_ENV_MULTIPLIER					(1.0 / 3.0)
 
-
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 3.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 
 { u8"1 Perfect Dark (U) (V1.1) 0000006B 00ED6982 Main Titles.mid", u8"Perfect Dark (U) (V1.1) 0000006B 00ED6982 Perfect Dark Logo music.mid TrackParseDebug.txt", u8"Main Titles", 0,

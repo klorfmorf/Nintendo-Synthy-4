@@ -310,7 +310,7 @@ int oldmain() {
 //#include "Src/Games/NS4JetForceGeminiFiles.inl"
 //#include "Src/Games/NS4JetForceGemini2Files.inl"
 //#include "Src/Games/NS4JetForceGeminiKioskFiles.inl"
-//#include "Src/Games/NS4PerfectDarkFiles.inl"
+#include "Src/Games/NS4PerfectDarkFiles.inl"
 //#include "Src/Games/NS4PerfectDarkOverSamplingFiles.inl"
 //#include "Src/Games/NS4GoldenEye007Files.inl"
 //#include "Src/Games/NS4GoldenEye007CustomFiles.inl"
@@ -341,7 +341,7 @@ int oldmain() {
 
 //#include "Src/Games/NS4Pilotwings64Files.inl"
 //#include "Src/Games/NS4PuyoPuyoSun64Files.inl"
-#include "Src/Games/NS4MischiefMakersFiles.inl"
+//#include "Src/Games/NS4MischiefMakersFiles.inl"
 //#include "Src/Games/NS4ExtremeGFiles.inl"
 //#include "Src/Games/NS4ExtremeGXG2Files.inl"
 //#include "Src/Games/NS4ChopperAttackFiles.inl"
