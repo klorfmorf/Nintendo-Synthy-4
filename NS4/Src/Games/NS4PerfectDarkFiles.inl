@@ -413,7 +413,6 @@
 	{
 		{ NS4_SET_COMPOSER( u8"Graeme Norgate and Grant Kirkhope" ) },
 	},
-	1
 },
 { u8"17 Perfect Dark (U) (V1.1) 0000004D 00EBDAD6 Deep Sea Nullify Threat Special Virus!.mid", u8"Perfect Dark (U) (V1.1) 0000004D 00EBDAD6 Deep Sea Special.mid TrackParseDebug.txt", u8"Deep Sea: Nullify Threat Special: Virus!", 0,
 	1,
