@@ -1108,5 +1108,8 @@
     <None Include="Src\Games\NS4MahjongHorokiClassicFiles.inl">
       <Filter>Header Files\Games</Filter>
     </None>
+    <None Include="Src\Games\NS4IdeYosukenoMahjongJukuFiles.inl">
+      <Filter>Header Files\Games</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -247,7 +247,7 @@ int oldmain() {
 
 #if 0
 	// Tools somehow stopped being able to load .n64 files due to not automatically byte-swapping them.
-#define LSN_SWAP_ME			L"Mischief Makers (USA) (Rev A)"
+#define LSN_SWAP_ME			L"Ide Yosuke no Mahjong Juku (Japan)"
 #define LSN_SWAP_ME_DIR		L"C:\\My Projects\\N64\\Roms\\"
 	{
 		const wchar_t * pu16ByteswapMe = LSN_SWAP_ME_DIR LSN_SWAP_ME L".n64";
@@ -306,11 +306,11 @@ int oldmain() {
 #ifdef NS4_BULK
 //#include "Src/Games/NS4ConkersBadFurDayFiles.inl"
 //#include "Src/Games/NS4ConkersBadFurDayECTSFiles.inl"
-//#include "Src/Games/NS4DinosaurPlanetFiles.inl"
+#include "Src/Games/NS4DinosaurPlanetFiles.inl"
 //#include "Src/Games/NS4JetForceGeminiFiles.inl"
 //#include "Src/Games/NS4JetForceGemini2Files.inl"
 //#include "Src/Games/NS4JetForceGeminiKioskFiles.inl"
-#include "Src/Games/NS4PerfectDarkFiles.inl"
+//#include "Src/Games/NS4PerfectDarkFiles.inl"
 //#include "Src/Games/NS4PerfectDarkOverSamplingFiles.inl"
 //#include "Src/Games/NS4GoldenEye007Files.inl"
 //#include "Src/Games/NS4GoldenEye007CustomFiles.inl"
@@ -452,6 +452,8 @@ int oldmain() {
 //#include "Src/Games/NS4Pachinko365NichiFiles.inl"
 //#include "Src/Games/NS4MoritaShogi64Files.inl"
 //#include "Src/Games/NS4MahjongHorokiClassicFiles.inl"
+//#include "Src/Games/NS4IdeYosukenoMahjongJukuFiles.inl"
+//#include "Src/Games/NS4IdeYosukenoMahjongJukuFiles.inl"
 
 //#include "Src/Games/NS4NeonGenesisEvangelionFiles.inl"
 

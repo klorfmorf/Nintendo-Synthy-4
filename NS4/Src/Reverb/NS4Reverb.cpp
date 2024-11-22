@@ -2793,7 +2793,7 @@ namespace ns4 {
 			NS4_TAPS( m_rtDinosaurPlanet0 ),
 			NS4_SQRT_0_5,//0.56470172114050299,													// dTapVol
 			0,																		// i64TapOffset
-			NS4_FADE( 1.0, 1.1, 5.4 ),
+			NS4_FADE( 1.0, 3.0, 6.0 ),
 			NS4_LPF( 1509.0 /*22018.0 / std::pow( 2.0, 4.0 )*/, 10552.0 / 22018.0, 0.5, NS4_FILTER_DB_TO_ORDER( 6 ) ),														// dLpfFactor
 			NS4_NO_DELAY,															// dDelayVol
 			nullptr,																// ptrSepReverb

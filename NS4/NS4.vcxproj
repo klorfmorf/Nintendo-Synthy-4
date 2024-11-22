@@ -301,6 +301,7 @@
     <None Include="Src\Games\NS4HarvestMoonFiles.inl" />
     <None Include="Src\Games\NS4HeyYouPikachuFiles.inl" />
     <None Include="Src\Games\NS4HybridHeavenFiles.inl" />
+    <None Include="Src\Games\NS4IdeYosukenoMahjongJukuFiles.inl" />
     <None Include="Src\Games\NS4IggysReckinBallsFiles.inl" />
     <None Include="Src\Games\NS4ItoiShigesatoNoBassTsuriNo1Files.inl" />
     <None Include="Src\Games\NS4JetForceGemini2Files.inl" />
