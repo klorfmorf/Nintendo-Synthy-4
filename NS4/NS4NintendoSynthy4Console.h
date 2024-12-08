@@ -306,11 +306,12 @@ int oldmain() {
 #ifdef NS4_BULK
 //#include "Src/Games/NS4ConkersBadFurDayFiles.inl"
 //#include "Src/Games/NS4ConkersBadFurDayECTSFiles.inl"
-#include "Src/Games/NS4DinosaurPlanetFiles.inl"
+//#include "Src/Games/NS4DinosaurPlanetFiles.inl"
 //#include "Src/Games/NS4JetForceGeminiFiles.inl"
 //#include "Src/Games/NS4JetForceGemini2Files.inl"
 //#include "Src/Games/NS4JetForceGeminiKioskFiles.inl"
-//#include "Src/Games/NS4PerfectDarkFiles.inl"
+#include "Src/Games/NS4PerfectDarkFiles.inl"
+//#include "Src/Games/NS4PerfectDark2Files.inl"
 //#include "Src/Games/NS4PerfectDarkOverSamplingFiles.inl"
 //#include "Src/Games/NS4GoldenEye007Files.inl"
 //#include "Src/Games/NS4GoldenEye007CustomFiles.inl"
@@ -327,6 +328,7 @@ int oldmain() {
 //#include "Src/Games/NS4BanjoTooieFiles.inl"
 //#include "Src/Games/NS4BanjoKazooieFiles.inl"
 //#include "Src/Games/NS4BlastCorpsFiles.inl"
+//#include "Src/Games/NS4BlastCorps2Files.inl"
 //#include "Src/Games/NS4BlastCorpsPALFiles.inl"
 //#include "Src/Games/NS4KillerInstinctGoldFiles.inl"
 //#include "Src/Games/NS4KillerInstinctGold2Files.inl"
@@ -452,7 +454,6 @@ int oldmain() {
 //#include "Src/Games/NS4Pachinko365NichiFiles.inl"
 //#include "Src/Games/NS4MoritaShogi64Files.inl"
 //#include "Src/Games/NS4MahjongHorokiClassicFiles.inl"
-//#include "Src/Games/NS4IdeYosukenoMahjongJukuFiles.inl"
 //#include "Src/Games/NS4IdeYosukenoMahjongJukuFiles.inl"
 
 //#include "Src/Games/NS4NeonGenesisEvangelionFiles.inl"
@@ -1046,21 +1047,14 @@ int oldmain() {
 		}
 #ifdef NS4_NO_FADE_FILE
 		if ( !bHasLoops ) {
-			wfFade.Open( reinterpret_cast<const char *>(NS4_NO_FADE_FILE) );
-			aFadeOut.clear();
-			wfFade.GetAllSamples( aFadeOut );
-			dFadeDur = 0.0;
-			if ( aFadeOut.size() ) {
-				dFadeDur = aFadeOut[0].size() / double( wfFade.Hz() );
-
-				bHasLoops = true;
-				dLoopTime = dFadeTime - dPreFade;
+			fFade.LoadTable( reinterpret_cast<const char *>(NS4_NO_FADE_FILE) );
+			bHasLoops = true;
+			dLoopTime = dFadeTime - dPreFade;
 #ifdef NS4_NO_FADE_WAIT
-				dPreFade = NS4_NO_FADE_WAIT;
+			dPreFade = NS4_NO_FADE_WAIT;
 #endif	// NS4_NO_FADE_WAIT
-				dFadeTime = (dLoopTime + dPreFade);
-				dTime = dFadeTime + dFadeDur + 1.0;
-			}
+			dFadeTime = (dLoopTime + dPreFade);
+			dTime = dFadeTime + fFade.Time() + 1.0;
 		}
 #endif	// NS4_NO_FADE_FILE
 		troOptions.uiSampleRate = static_cast<uint32_t>(dNewSampleRate * dAntiAliasLevel);

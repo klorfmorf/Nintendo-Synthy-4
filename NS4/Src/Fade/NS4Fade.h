@@ -16,6 +16,7 @@ namespace ns4 {
 			ns4::CWavFile wfFade;
 			
 			if ( !wfFade.Open( _pcFile ) ) { return false; }
+			m_aFadeOut.clear();
 			wfFade.GetAllSamples( m_aFadeOut );
 			m_ui32Hz = wfFade.Hz();
 			if ( m_aFadeOut.size() ) {
