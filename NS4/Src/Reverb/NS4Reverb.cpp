@@ -1720,7 +1720,7 @@ namespace ns4 {
 		// Perfect Dark.
 		{
 			NS4_TAPS( m_rtPerfectDarkLeft0 ),
-			0.71105100054291037,													// dTapVol
+			NS4_SQRT_0_5,													// dTapVol
 			0,																		// i64TapOffset
 			NS4_PD_FADE,															// dTime
 			NS4_PD_FILTER,															// dLpfFactor
@@ -2925,6 +2925,15 @@ namespace ns4 {
 			NS4_LPF( 1008.0 * 2.0, 6400.0 / 22047.0 * 5.0, 1.0, NS4_FILTER_DB_TO_ORDER( 12 ) ),														// dLpfFactor
 			//NS4_NO_LPF,
 		},	// 178
+		// Perfect Dark.
+		{
+			NS4_TAPS( m_rtPerfectDarkLeft0 ),
+			NS4_SQRT_0_5,															// dTapVol
+			0,																		// i64TapOffset
+			NS4_PD_FADE,															// dTime
+			NS4_PD_FILTER,															// dLpfFactor
+			NS4_NO_DELAY,															// dDelayVol
+		},	// 179
 	};
 
 

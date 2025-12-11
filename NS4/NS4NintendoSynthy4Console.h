@@ -217,11 +217,11 @@ int oldmain() {
 
 #if 0
 	{
-		const uint32_t ui32SampRate = 22047;
+		const uint32_t ui32SampRate = 32006;
 		
 		ns4::lwaudio aWet = ns4::CWavLib::AllocateSamples( 1, ui32SampRate * 30 );
 		aWet[0][0] = 1.0;
-		ns4::lwaudio aAccum = ns4::CReverb::CreateReverb( ns4::CReverb::NS4_T_PUYO_PUYO_SUN_64_DELAY_0, aWet, ui32SampRate, ui32SampRate, 0.0, 0 );
+		ns4::lwaudio aAccum = ns4::CReverb::CreateReverb( ns4::CReverb::NS4_T_SUPER_SMASH_BROS_DELAY_0, aWet, ui32SampRate, ui32SampRate, 0.0, 0 );
 		ns4::lwsample sFirst = aWet[0][0];
 		if ( sFirst == 0.0 ) {
 			::OutputDebugStringA( "Measles.\r\n" );
@@ -247,7 +247,7 @@ int oldmain() {
 
 #if 0
 	// Tools somehow stopped being able to load .n64 files due to not automatically byte-swapping them.
-#define LSN_SWAP_ME			L"Ide Yosuke no Mahjong Juku (Japan)"
+#define LSN_SWAP_ME			L"Glover (USA) (Beta)"
 #define LSN_SWAP_ME_DIR		L"C:\\My Projects\\N64\\Roms\\"
 	{
 		const wchar_t * pu16ByteswapMe = LSN_SWAP_ME_DIR LSN_SWAP_ME L".n64";
@@ -310,7 +310,9 @@ int oldmain() {
 //#include "Src/Games/NS4JetForceGeminiFiles.inl"
 //#include "Src/Games/NS4JetForceGemini2Files.inl"
 //#include "Src/Games/NS4JetForceGeminiKioskFiles.inl"
-#include "Src/Games/NS4PerfectDarkFiles.inl"
+//#include "Src/Games/NS4PerfectDarkFiles.inl"
+//#include "Src/Games/NS4PerfectDarkKarlFiles.inl"
+//#include "Src/Games/NS4PerfectDarkStereoFiles.inl"
 //#include "Src/Games/NS4PerfectDark2Files.inl"
 //#include "Src/Games/NS4PerfectDarkOverSamplingFiles.inl"
 //#include "Src/Games/NS4GoldenEye007Files.inl"
@@ -390,6 +392,7 @@ int oldmain() {
 //#include "Src/Games/NS4Starfox64UncompressedFiles.inl"
 //#include "Src/Games/NS4TheLegendOfZeldaOcarinaOfTimeFiles.inl"
 //#include "Src/Games/NS4TheLegendOfZeldaMajorasMaskFiles.inl"
+//#include "Src/Games/NS4TheLegendOfZeldaOcarinaOfTimeLonLonRanchFiles.inl"
 //#include "Src/Games/NS4YoshisStoryFiles.inl"
 //#include "Src/Games/NS4MarioKart64Files.inl"
 //#include "Src/Games/NS4MarioKart64HeadphonesFiles.inl"
@@ -424,6 +427,7 @@ int oldmain() {
 //#include "Src/Games/NS4WormsArmageddonFiles.inl"
 //#include "Src/Games/NS4MicroMachines64TurboFiles.inl"
 //#include "Src/Games/NS4GloverFiles.inl"
+#include "Src/Games/NS4GloverPrototypeFiles.inl"
 //#include "Src/Games/NS4ArmyMenAirCombatFiles.inl"
 //#include "Src/Games/NS4ArmyMenSargesHeroesFiles.inl"
 //#include "Src/Games/NS4Gex3DeepCoverGeckoFiles.inl"

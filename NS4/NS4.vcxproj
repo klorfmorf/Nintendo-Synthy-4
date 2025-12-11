@@ -294,6 +294,7 @@
     <None Include="Src\Games\NS4GetterLoveFiles.inl" />
     <None Include="Src\Games\NS4Gex3DeepCoverGeckoFiles.inl" />
     <None Include="Src\Games\NS4GloverFiles.inl" />
+    <None Include="Src\Games\NS4GloverPrototypeFiles.inl" />
     <None Include="Src\Games\NS4GoldenEye007CustomFiles.inl" />
     <None Include="Src\Games\NS4GoldenEye007Files.inl" />
     <None Include="Src\Games\NS4GoldenEye007OstFiles.inl" />
@@ -343,7 +344,9 @@
     <None Include="Src\Games\NS4PennyRacersFiles.inl" />
     <None Include="Src\Games\NS4PennyRacersOverSamplingFiles.inl" />
     <None Include="Src\Games\NS4PerfectDarkFiles.inl" />
+    <None Include="Src\Games\NS4PerfectDarkKarlFiles.inl" />
     <None Include="Src\Games\NS4PerfectDarkOverSamplingFiles.inl" />
+    <None Include="Src\Games\NS4PerfectDarkStereoFiles.inl" />
     <None Include="Src\Games\NS4Pilotwings64Files.inl" />
     <None Include="Src\Games\NS4PokemonSnapFiles.inl" />
     <None Include="Src\Games\NS4PokemonStadium2Files.inl" />
@@ -387,6 +390,7 @@
     <None Include="Src\Games\NS4TamiyaRacing64ProtoFiles.inl" />
     <None Include="Src\Games\NS4TheLegendOfZeldaMajorasMaskFiles.inl" />
     <None Include="Src\Games\NS4TheLegendOfZeldaOcarinaOfTimeFiles.inl" />
+    <None Include="Src\Games\NS4TheLegendOfZeldaOcarinaOfTimeLonLonRanchFiles.inl" />
     <None Include="Src\Games\NS4TonicTroubleFiles.inl" />
     <None Include="Src\Games\NS4ToonPanicFiles.inl" />
     <None Include="Src\Games\NS4ToonPanicOverSampledFiles.inl" />

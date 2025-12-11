@@ -1,14 +1,14 @@
 #define NS4_GAME							u8"Perfect Dark"
-#define NS4_TITLE_POSTFIX					u8" (Surround)"
+#define NS4_TITLE_POSTFIX					u8" (Stereo)"
 #define NS4_COMPOSERS						u8"David Clynick, Graeme Norgate, Grant Kirkhope"
 #define NS4_YEAR							u8"2000"
 #define NS4_FOLDER							u8"Perfect Dark"
 #define NS4_BANK							u8"01"
-#define NS4_REVERB_TRACKS					2
-#define NS4_REVERB							ns4::CReverb::NS4_T_PERFECT_DARK_0
+#define NS4_REVERB_TRACKS					1
+#define NS4_REVERB							ns4::CReverb::NS4_T_PERFECT_DARK_MONO_0
 #define NS4_ORIG_HZ							22018
 #define NS4_CURVE							20.0
-#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Perfect Dark (Surround)\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Perfect Dark (Stereo)\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_WET_FILTER_FREQ					0.0//(NS4_ORIG_HZ / std::pow( 2.0, 1.125 ))
 //#define NS4_MASTER_REVERB_VOLUME			2.0

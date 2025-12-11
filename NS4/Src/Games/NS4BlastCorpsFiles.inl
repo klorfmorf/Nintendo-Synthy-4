@@ -7,7 +7,7 @@
 #define NS4_REVERB							ns4::CReverb::NS4_T_BLAST_CORPS_0
 #define NS4_ORIG_HZ							22047
 #define NS4_CURVE							40.0
-#define NS4_OUT_DIRECTORY					u8"T:\\N64OST\\Blast Corps\\"
+#define NS4_OUT_DIRECTORY					u8"C:\\N64OST\\Blast Corps\\"
 #define NS4_OUT_DIRECTORY_NUMBERS			NS4_OUT_DIRECTORY u8"Numbered\\"
 #define NS4_WET_FILTER_FREQ					4736.0//(NS4_ORIG_HZ / std::pow( 2.0, 3.0 ))
 #define NS4_ENV_MULTIPLIER					(1.0)
@@ -16,6 +16,10 @@
 #define NS4_ENVELOPE_POINT_CURVE			40.0
 //#define NS4_MASTER_REVERB_VOLUME			(2.0)
 
+#define NS4_OVERSAMPLING					(1 << 2)
+#define NS4_OVERSAMPLING_BW					22050.0 / 2.0
+#define NS4_ANTI_ALIASING_LEVEL				2
+#define NS4_ANTI_ALIASING_HZ				20000.0
 
 { u8"Blast Corps (U) (V1.1) 00000011 0046A3D4.mid", u8"Blast Corps (U) (V1.1) 00000011 0046A3D4.mid TrackParseDebug.txt", u8"Title, Glory Crossing", 0 },
 { u8"Blast Corps (U) (V1.1) 00000021 0047903C.mid", u8"Blast Corps (U) (V1.1) 00000021 0047903C.mid TrackParseDebug.txt", u8"Menu", 0 },
